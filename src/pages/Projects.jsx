@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
-import { Link } from "react-router-dom";
 
-// Base de proyectos (la vas a usar en ProjectDesc también)
-const projects = [
+// Base de proyectos
+const projectsData = [
   {
     id: 1,
-    title: "Tienda de Vinos",
-    description: "Una tienda online para vinos franceses, conectada con pasarela de pagos.",
-    technologies: ["React", "Tailwind CSS", "Firebase"],
+    title: "Sur Marchands",
+    shortDescription: "Tienda online de vinos franceses con pasarela de pagos integrada.",
+    longDescription: "Sur Marchands es una elegante tienda online especializada en vinos franceses. El proyecto incluye un sistema de gestión de inventario, pasarela de pagos segura, y un diseño responsivo que destaca la calidad de los productos. Implementé un carrito de compras intuitivo y un sistema de filtros avanzado para facilitar la búsqueda de vinos por región, tipo y precio.",
+    technologies: ["WordPress","WooCommerce", "HTML + CSS", "PHP"],
     images: [
       "/images/surmarchands.png",
       "/images/surmarchands-dos.png",
@@ -24,10 +24,16 @@ const projects = [
   },
   {
     id: 2,
-    title: "Blog Personal",
-    description: "Un blog moderno para compartir artículos y recursos.",
-    technologies: ["Vue", "Laravel", "MySQL"],
+    title: "Claudia Cestau",
+    shortDescription: "Portfolio personal de una artista visual con galería de obras y blog integrado.",
+    longDescription: "Portfolio personal para la artista visual Claudia Cestau. El sitio incluye una galería dinámica de sus obras, un blog para compartir su proceso creativo, y una sección de contacto para comisiones. El diseño minimalista y elegante pone el foco en su obra, con una navegación intuitiva y una experiencia de usuario optimizada para dispositivos móviles.",
+    technologies: ["WordPress","WooCommerce", "HTML + CSS","JavaScript", "PHP"],
     images: [
+      "/images/mariu-cestau.png",
+      "/images/mariu-cestau-dos.png",
+      "/images/mariu-cestau-tres.png",
+    ],
+    gallery: [
       "/images/mariu-cestau.png",
       "/images/mariu-cestau-dos.png",
       "/images/mariu-cestau-tres.png",
@@ -36,10 +42,17 @@ const projects = [
   },
   {
     id: 3,
-    title: "Blog Personal",
-    description: "Un blog moderno para compartir artículos y recursos.",
-    technologies: ["Vue", "Laravel", "MySQL"],
+    title: "Haras Abril",
+    shortDescription: "Sitio web para un haras con sistema de reservas y gestión de caballos.",
+    longDescription: "Plataforma web completa para Haras Abril, incluyendo un sistema de reservas para clases de equitación, gestión de caballos, y una sección de noticias. El proyecto implementa un panel de administración para gestionar reservas, actualizar información de los caballos, y publicar contenido. El diseño refleja la elegancia y profesionalismo del haras.",
+    technologies: ["WordPress", "HTML + CSS", "PHP"],
     images: [
+      "/images/haras-abril.png",
+      "/images/haras-abril-dos.png",
+      "/images/haras-abril-tres.png",
+      "/images/haras-abril-cuatro.png",
+    ],
+    gallery: [
       "/images/haras-abril.png",
       "/images/haras-abril-dos.png",
       "/images/haras-abril-tres.png",
@@ -49,10 +62,16 @@ const projects = [
   },
   {
     id: 4,
-    title: "Blog Personal",
-    description: "Un blog moderno para compartir artículos y recursos.",
-    technologies: ["Vue", "Laravel", "MySQL"],
+    title: "EscoPlay",
+    shortDescription: "Plataforma educativa interactiva para niños con juegos y actividades.",
+    longDescription: "EscoPlay es una plataforma educativa innovadora diseñada para hacer el aprendizaje divertido para los niños. Incluye juegos interactivos, actividades educativas, y un sistema de seguimiento del progreso. La plataforma está optimizada para diferentes dispositivos y edades, con contenido personalizable y un diseño amigable para niños. Implementé un sistema de gamificación para mantener el interés y la motivación de los usuarios.",
+    technologies: ["WordPress","WooCommerce", "HTML + CSS", "PHP"],
     images: [
+      "/images/escoplay.png",
+      "/images/escoplay-dos.png",
+      "/images/escoplay-tres.png",
+    ],
+    gallery: [
       "/images/escoplay.png",
       "/images/escoplay-dos.png",
       "/images/escoplay-tres.png",
@@ -60,9 +79,6 @@ const projects = [
     link: "#",
   },
 ];
-
-// 👉 Exporto projects aparte para usar en ProjectDesc
-export { projects };
 
 export default function Projects() {
   const [visibleCards, setVisibleCards] = useState([]);
@@ -109,7 +125,7 @@ export default function Projects() {
           Proyectos
         </h2>
         <div className="flex flex-col gap-32">
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <div
               key={project.id}
               ref={(el) => (cardRefs.current[index] = el)}
@@ -118,7 +134,6 @@ export default function Projects() {
                 visibleCards.includes(index) ? "visible" : ""
               }`}
             >
-              {/* 👇 El Link ahora se pasará DENTRO del botón Ver Detalle, no acá */}
               <ProjectCard project={project} />
             </div>
           ))}
@@ -126,7 +141,7 @@ export default function Projects() {
       </div>
 
       {/* Animaciones */}
-      <style >{`
+      <style>{`
         .fade-in-card {
           opacity: 0;
           transform: translateY(20px);
@@ -140,3 +155,6 @@ export default function Projects() {
     </section>
   );
 }
+
+// Exportamos el array de proyectos para usarlo en ProjectDesc
+export { projectsData as projects };

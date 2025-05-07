@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ImageSliderSwiper from "../components/ImageSliderSwiper";
 import Squares from "../components/Squares";
+import WaveEffect from "../components/WaveEffect";
 
 const Home = () => {
   const skills = [
@@ -35,18 +36,18 @@ const Home = () => {
               <span className="text-[#4fd1c5] block">web developer / designer</span>
             </h1>
             <p className="mt-6 text-xl text-gray-300 mb-8">
-              Frontend & Backend Developer | WordPress Expert | UI/UX Lover
+              Desarrollador Full Stack | Diseñador UI/UX | Experto en WordPress y React
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/projects"
-                className="px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-md hover:bg-[#38b2ac] transition transform hover:scale-105"
+                className="px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition transform hover:scale-105"
               >
                 Ver Proyectos
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 border-2 border-[#4fd1c5] text-[#4fd1c5] font-semibold rounded-md hover:bg-[#4fd1c5] hover:text-black transition transform hover:scale-105"
+                className="px-8 py-4 border-2 border-[#4fd1c5] text-[#4fd1c5] font-semibold rounded-full hover:bg-[#4fd1c5] hover:text-black transition transform hover:scale-105"
               >
                 Contactar
               </Link>
@@ -68,7 +69,7 @@ const Home = () => {
               <div className="flex justify-center mt-12">
                 <Link
                   to="/projects"
-                  className="group inline-flex items-center px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-md hover:bg-[#38b2ac] transition-all duration-300"
+                  className="group inline-flex items-center px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition-all duration-300"
                 >
                   Ver todos los proyectos
                   <svg 
@@ -109,10 +110,10 @@ const Home = () => {
                   Sobre mí
                 </h2>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  Soy un apasionado desarrollador web y diseñador con más de 5 años de experiencia. Me especializo en crear experiencias digitales únicas, combinando frontend, backend y un amor por el diseño UI/UX.
+                  Soy un desarrollador Full Stack especializado en crear experiencias web innovadoras. Mi enfoque combina el desarrollo frontend con React y tecnologías modernas, junto con sólidos conocimientos en backend y bases de datos.
                 </p>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  Mi enfoque se centra en crear soluciones que no solo se vean bien, sino que también funcionen de manera eficiente y proporcionen una excelente experiencia de usuario.
+                  Me destaco en la creación de sitios web dinámicos y aplicaciones web, desde tiendas online hasta plataformas educativas. Mi pasión por el diseño UI/UX me permite crear interfaces intuitivas y atractivas que mejoran la experiencia del usuario.
                 </p>
                 <Link
                   to="/about"
@@ -166,7 +167,7 @@ const Home = () => {
               <div className="flex justify-center mt-12">
                 <Link
                   to="/skills"
-                  className="group inline-flex items-center px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-md hover:bg-[#38b2ac] transition-all duration-300"
+                  className="group inline-flex items-center px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition-all duration-300"
                 >
                   Conoce mis habilidades
                   <svg 
@@ -185,15 +186,7 @@ const Home = () => {
 
         {/* Contacto */}
         <section className="w-full py-24 bg-[#1a1a1a] text-center relative overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Squares
-              direction="diagonal"
-              speed={0.3}
-              borderColor="#4fd1c5"
-              squareSize={30}
-              hoverFillColor="#38b2ac"
-            />
-          </div>
+          <WaveEffect />
           <div className="max-w-4xl mx-auto px-4 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-[#4fd1c5] mb-6">
               ¿Trabajamos juntos?
@@ -203,7 +196,7 @@ const Home = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-block px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-md hover:bg-[#38b2ac] transition transform hover:scale-105"
+              className="inline-block px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition transform hover:scale-105"
             >
               Contactame
             </Link>
