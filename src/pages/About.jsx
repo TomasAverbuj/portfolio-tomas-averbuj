@@ -1,42 +1,65 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section className="w-full min-h-screen py-16 bg-[#1e1e1e] text-white">
       <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-5xl md:text-6xl font-bold text-teal-400 mb-8 text-center">
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-5xl md:text-6xl font-bold text-teal-400 mb-8 text-center"
+        >
           Sobre mí
-        </h1>
+        </motion.h1>
 
         <div className="space-y-10 text-lg leading-relaxed text-gray-300">
           {/* Sección ¿Quién soy? */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h2 className="text-3xl font-semibold text-teal-400 mb-2">¿Quién soy?</h2>
             <p>
               Soy desarrollador y diseñador web con un enfoque integral que combina programación, diseño UI/UX y edición multimedia.
-              Actualmente formo parte de <strong>Doble Nuez</strong>, donde desarrollo y mantengo sitios web, además de crear contenido audiovisual para grandes marcas como <strong>Tienda New San</strong> y <strong>Atma</strong>.
+              Actualmente trabajo en <strong>Doble Nuez</strong>, donde desarrollo y mantengo sitios web, además de crear contenido audiovisual para grandes marcas como <strong>Tienda New San</strong>.
             </p>
             <p className="mt-2">
               Mi formación abarca desde el desarrollo frontend y backend hasta el diseño visual, lo que me permite abordar los proyectos tanto desde un aspecto técnico como creativo.
-              Trabajo activamente con <strong>WordPress</strong> y herramientas modernas como <strong>React</strong>, <strong>Node.js</strong> y <strong>MongoDB</strong>.
+              Trabajo activamente con <strong>WordPress</strong> y herramientas modernas como <strong>React</strong>, <strong>Vue.js</strong>, <strong>Node.js</strong> y <strong>MongoDB</strong>.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Sección ¿Cómo empezó todo? */}
-          <div>
-            <h2 className="text-3xl font-semibold text-teal-400 mb-2">¿Cómo empezó todo?</h2>
-            <p>
-              A mediados de 2021, la curiosidad por entender cómo funcionaban las páginas web me llevó a dar mis primeros pasos en la programación.
-              Lo que comenzó como un interés personal pronto se transformó en una vocación.
-            </p>
-            <p className="mt-2">
-              Desde entonces, cada proyecto representa una oportunidad para seguir creciendo, perfeccionar mis habilidades y crear experiencias digitales que realmente marquen la diferencia.
-            </p>
-          </div>
+          {/* Sección Educación */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <h2 className="text-3xl font-semibold text-teal-400 mb-2">Educación</h2>
+            <div className="space-y-4">
+              <div className="bg-[#2a2a2a] p-4 rounded-lg">
+                <h3 className="font-semibold text-xl text-teal-400">Escuela Multimedial Da Vinci</h3>
+                <p className="text-gray-300">Desarrollo y Diseño Web</p>
+                <p className="text-gray-400">Cursando las últimas 4 materias – Buenos Aires, Argentina</p>
+              </div>
+              <div className="bg-[#2a2a2a] p-4 rounded-lg">
+                <h3 className="font-semibold text-xl text-teal-400">Escuela Comercial N°26 Enrique De Vedia</h3>
+                <p className="text-gray-300">Educación Secundaria Completa</p>
+                <p className="text-gray-400">Año de egreso 2021 – Buenos Aires, Argentina</p>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Sección Línea de tiempo - Experiencia profesional */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <h2 className="text-3xl font-semibold text-teal-400 mb-2">Mi camino profesional</h2>
 
             {/* Línea de tiempo de experiencias */}
@@ -45,10 +68,10 @@ const About = () => {
                 <div className="absolute -left-3 w-6 h-6 bg-teal-400 rounded-full"></div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-xl text-teal-400">2023 - Actualidad</h3>
-                  <p className="mt-1 text-lg text-gray-300">Desarrollador Web en <strong>Doble Nuez</strong></p>
+                  <p className="mt-1 text-lg text-gray-300">Desarrollador Web y Audiovisual en <strong>Doble Nuez</strong></p>
                   <p className="mt-2 text-gray-400">
-                    Desarrollo y mantengo sitios web, además de crear contenido audiovisual para marcas como Tienda New San y Atma.
-                    Mi trabajo se enfoca en el diseño web responsive y la optimización de las experiencias digitales de los clientes.
+                    Desarrollo y mantenimiento de sitios web en WordPress, implementación de nuevas funcionalidades,
+                    optimización de rendimiento y creación de contenido audiovisual para Tienda New San.
                   </p>
                 </div>
               </div>
@@ -56,11 +79,10 @@ const About = () => {
               <div className="flex items-center">
                 <div className="absolute -left-3 w-6 h-6 bg-teal-400 rounded-full"></div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-xl text-teal-400">2022 - 2023</h3>
-                  <p className="mt-1 text-lg text-gray-300">Freelancer en Desarrollo Web y Diseño Gráfico</p>
+                  <h3 className="font-semibold text-xl text-teal-400">2023</h3>
+                  <p className="mt-1 text-lg text-gray-300">Operador de Sistemas en <strong>Jockey Club, Hipódromo de San Isidro</strong></p>
                   <p className="mt-2 text-gray-400">
-                    Trabajé en proyectos freelance para varias empresas, diseñando y desarrollando sitios web en WordPress y creando contenido visual en Adobe Photoshop e Illustrator.
-                    Además, gestioné la implementación de soluciones personalizadas para cada cliente.
+                    Operación y manejo del sistema de apuestas, gestión de datos en tiempo real y atención al público.
                   </p>
                 </div>
               </div>
@@ -68,29 +90,53 @@ const About = () => {
               <div className="flex items-center">
                 <div className="absolute -left-3 w-6 h-6 bg-teal-400 rounded-full"></div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-xl text-teal-400">2020 - 2021</h3>
-                  <p className="mt-1 text-lg text-gray-300">Asistente Administrativo en <strong>Padilla S.A.</strong></p>
+                  <h3 className="font-semibold text-xl text-teal-400">2020 - 2023</h3>
+                  <p className="mt-1 text-lg text-gray-300">Administración de Edificios <strong>Padilla</strong></p>
                   <p className="mt-2 text-gray-400">
-                    Gestioné tareas administrativas, atendí consultas y coordiné procesos internos, contribuyendo a la organización de la oficina y la comunicación eficiente entre los departamentos.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <div className="absolute -left-3 w-6 h-6 bg-teal-400 rounded-full"></div>
-                <div className="ml-4">
-                  <h3 className="font-semibold text-xl text-teal-400">2018 - 2020</h3>
-                  <p className="mt-1 text-lg text-gray-300">Desarrollador Web Freelance</p>
-                  <p className="mt-2 text-gray-400">
-                    Creé sitios web estáticos y dinámicos para pequeñas empresas, usando tecnologías como HTML, CSS, JavaScript y PHP. Durante este período, comencé a estudiar formalmente desarrollo web.
+                    Gestión administrativa, atención de consultas y manejo de documentación.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Sección Habilidades */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            <h2 className="text-3xl font-semibold text-teal-400 mb-2">Habilidades Técnicas</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-[#2a2a2a] p-4 rounded-lg">
+                <h3 className="font-semibold text-xl text-teal-400 mb-2">Desarrollo</h3>
+                <ul className="space-y-2">
+                  <li>• JavaScript, PHP</li>
+                  <li>• HTML5, CSS3</li>
+                  <li>• React, Vue.js, Node.js</li>
+                  <li>• Express, Tailwind CSS</li>
+                  <li>• MongoDB, Firebase</li>
+                </ul>
+              </div>
+              <div className="bg-[#2a2a2a] p-4 rounded-lg">
+                <h3 className="font-semibold text-xl text-teal-400 mb-2">Herramientas</h3>
+                <ul className="space-y-2">
+                  <li>• WordPress, WooCommerce</li>
+                  <li>• Git, GitHub</li>
+                  <li>• Figma, Photoshop, Illustrator</li>
+                  <li>• CapCut</li>
+                  <li>• Netlify, Vercel</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Sección Más allá del código */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
             <h2 className="text-3xl font-semibold text-teal-400 mb-2">Más allá del código</h2>
             <p>
               Fuera del mundo digital, el <strong>fútbol</strong> es una de mis grandes pasiones (hincha de River ⚽), al igual que el <strong>mundo de los videojuegos</strong>, que siempre me inspiró por su creatividad y dinamismo.
@@ -98,31 +144,16 @@ const About = () => {
             <p className="mt-2">
               Me defino como una persona proactiva, autodidacta y comprometida con cada proyecto en el que participo.
             </p>
-          </div>
-
-          {/* Sección ¿Por qué trabajar conmigo? */}
-          <div>
-            <h2 className="text-3xl font-semibold text-teal-400 mb-2">¿Por qué trabajar conmigo?</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>
-                <strong>Curioso y en constante evolución:</strong> Siempre estoy aprendiendo nuevas tecnologías para mantenerme actualizado.
-              </li>
-              <li>
-                <strong>Compromiso total:</strong> Me involucro de lleno en cada proyecto, buscando siempre superar las expectativas.
-              </li>
-              <li>
-                <strong>Creativo y técnico:</strong> Combino diseño, desarrollo y estrategia para lograr resultados sólidos y atractivos.
-              </li>
-              <li>
-                <strong>Orientado a resultados:</strong> Mi prioridad es crear soluciones funcionales, escalables y alineadas a los objetivos de cada cliente o proyecto.
-              </li>
-            </ul>
-          </div>
+          </motion.div>
         </div>
 
         {/* Sección con botones */}
-        <div className="flex justify-center gap-8 mt-16">
-          {/* Botón de Ver Proyectos */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+          className="flex justify-center gap-8 mt-16"
+        >
           <Link
             to="/projects"
             className="inline-block px-6 py-3 border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-black transition rounded-md"
@@ -130,14 +161,13 @@ const About = () => {
             Ver mis proyectos
           </Link>
 
-          {/* Botón de Contactarme */}
           <Link
             to="/contact"
             className="inline-block px-6 py-3 bg-teal-400 text-black hover:bg-teal-300 transition rounded-md"
           >
             Contactame
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

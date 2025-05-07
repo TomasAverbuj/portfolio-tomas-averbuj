@@ -8,10 +8,10 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 const images = [
-  "/haras-abril.png",
-  "/mariu-cestau.png",
-  "/escoplay.png",
-  "/surmarchands.png",
+  "/images/haras-abril.png",
+  "/images/mariu-cestau.png",
+  "/images/escoplay.png",
+  "/images/surmarchands.png",
 ];
 
 const ImageSliderSwiper = () => {
@@ -43,11 +43,11 @@ const ImageSliderSwiper = () => {
           className="mySwiper"
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="max-w-xs flex items-start">
+            <SwiperSlide key={index} className="max-w-[300px] md:max-w-[400px]">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-64 md:h-100 object-top object-cover rounded-xl"
+                className="w-full h-[400px] md:h-[500px] object-cover object-top rounded-xl"
               />
             </SwiperSlide>
           ))}

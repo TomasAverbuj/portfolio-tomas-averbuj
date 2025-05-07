@@ -17,9 +17,9 @@ function Navbar() {
                 <div className="relative z-20">
                   <a href="#">
                     <img
-                      src="/logo-tomas.png"
-                      alt="logo-tailus"
-                      className="w-20"
+                      src="/images/logo-tomas.png"
+                      alt="Logo Tomas Averbuj"
+                      className="h-8"
                     />
                   </a>
                 </div>
