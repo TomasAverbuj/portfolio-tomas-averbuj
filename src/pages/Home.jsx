@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import ImageSliderSwiper from "../components/ImageSliderSwiper";
 import Squares from "../components/Squares";
 import WaveEffect from "../components/WaveEffect";
+import TypewriterText from "../components/TypewriterText";
 
 const Home = () => {
   const skills = [
@@ -32,11 +33,13 @@ const Home = () => {
 
           <div className="z-10 text-center relative bg-[#121212]/80 p-8 rounded-xl backdrop-blur-sm max-w-4xl mx-4">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-[#4fd1c5] block mb-2">Hi, I'm Tomás,</span>
-              <span className="text-[#4fd1c5] block">web developer / designer</span>
+              <span className="text-[#4fd1c5] block mb-2">Hola, soy Tomás</span>
+              <span className="block">
+                <TypewriterText />
+              </span>
             </h1>
             <p className="mt-6 text-xl text-gray-300 mb-8">
-              Desarrollador Full Stack | Diseñador UI/UX | Experto en WordPress y React
+              Desarrollador Full Stack | Diseñador Web | Experto en WordPress y React
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

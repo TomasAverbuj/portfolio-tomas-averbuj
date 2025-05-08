@@ -19,7 +19,7 @@ function Navbar() {
                     <img
                       src="/images/logo-tomas.png"
                       alt="Logo Tomas Averbuj"
-                      className="h-8"
+                      className="h-14"
                     />
                   </a>
                 </div>
