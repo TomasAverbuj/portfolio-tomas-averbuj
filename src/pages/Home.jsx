@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ImageSliderSwiper from "../components/ImageSliderSwiper";
 import Squares from "../components/Squares";
-import WaveEffect from "../components/WaveEffect";
 import TypewriterText from "../components/TypewriterText";
 
 const Home = () => {
@@ -188,9 +187,8 @@ const Home = () => {
         </section>
 
         {/* Contacto */}
-        <section className="w-full py-24 bg-[#1a1a1a] text-center relative overflow-hidden">
-          <WaveEffect />
-          <div className="max-w-4xl mx-auto px-4 relative z-10">
+        <section className="w-full py-24 bg-[#1a1a1a] text-center">
+          <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-bold text-[#4fd1c5] mb-6">
               ¿Trabajamos juntos?
             </h2>
