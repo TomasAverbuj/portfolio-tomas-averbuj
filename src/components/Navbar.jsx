@@ -65,6 +65,10 @@ function Navbar() {
                                   isActive ? "text-[#4fd1c5]" : "text-[#e2e2e2] hover:text-[#4fd1c5]"
                                 }`
                               }
+                              onClick={() => {
+                                const checkbox = document.getElementById('hamburger');
+                                if (checkbox && window.innerWidth < 1024) checkbox.checked = false;
+                              }}
                             >
                               {({ isActive }) => (
                                 <span className={isActive ? "border-b-2 border-[#4fd1c5] pb-1" : ""}>

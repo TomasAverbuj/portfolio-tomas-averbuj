@@ -12,6 +12,9 @@ const images = [
   "/images/mariu-cestau.png",
   "/images/escoplay.png",
   "/images/surmarchands.png",
+  "/images/logo-pokedex-tarjeta.jpg",
+  "/images/icono-levelear-portfolio.jpg",
+  
 ];
 
 const ImageSliderSwiper = () => {
@@ -24,10 +27,10 @@ const ImageSliderSwiper = () => {
           centeredSlides={true}
           slidesPerView={"auto"}
           spaceBetween={30}
-          initialSlide={1} // Comenzar desde la segunda imagen (índice 1)
+          initialSlide={1}
           autoplay={{
-            delay: 15000, // Cambiar cada 15 segundos (15000 ms)
-            disableOnInteraction: false, // No detener el autoplay al interactuar
+            delay: 15000,
+            disableOnInteraction: false,
           }}
           coverflowEffect={{
             rotate: 50,
@@ -39,7 +42,7 @@ const ImageSliderSwiper = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[EffectCoverflow, Pagination, Autoplay]} // Añadimos Autoplay a los módulos
+          modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper"
         >
           {images.map((image, index) => (

@@ -11,6 +11,7 @@ const skillsData = [
       { name: "React", level: 80 },
       { name: "Vue.js", level: 75 },
       { name: "Tailwind CSS", level: 85 },
+      { name: "Bootstrap", level: 80 },
       { name: "Vite", level: 80 }
     ],
   },
@@ -22,19 +23,25 @@ const skillsData = [
       { name: "APIs REST", level: 80 },
       { name: "MongoDB", level: 70 },
       { name: "Firebase", level: 75 },
-      { name: "Express", level: 75 }
+      { name: "Express", level: 75 },
+      { name: "WordPress", level: 85 },
+      { name: "WooCommerce", level: 80 }
     ],
   },
   {
     category: "Diseño y Herramientas",
     skills: [
-      { name: "WordPress", level: 85 },
-      { name: "WooCommerce", level: 80 },
       { name: "Figma", level: 85 },
       { name: "Photoshop", level: 80 },
       { name: "Illustrator", level: 75 },
       { name: "CapCut", level: 85 },
-      { name: "Git/GitHub", level: 80 }
+      { name: "After Effects", level: 75 },
+      { name: "Git/GitHub", level: 80 },
+      { name: "Visual Studio Code", level: 90 },
+      { name: "Postman", level: 75 },
+      { name: "Render", level: 80 },
+      { name: "Vercel", level: 80 },
+      { name: "Netlify", level: 80 }
     ],
   },
 ];

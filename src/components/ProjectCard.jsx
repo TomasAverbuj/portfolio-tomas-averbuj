@@ -11,13 +11,13 @@ export default function ProjectCard({ project }) {
   const images = project?.images || [];
 
   return (
-    <div className="flex flex-col md:flex-row items-center w-full bg-[#2a2a2a] rounded-lg shadow-xl">
-      <div className="w-full md:w-1/2 h-80 flex items-center justify-center overflow-visible">
+    <div className="flex flex-col md:flex-row items-center w-full bg-[#2a2a2a] rounded-2xl shadow-xl min-h-[520px] p-4 md:p-8">
+      <div className="w-full md:w-1/2 h-[480px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <Swiper
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards]}
-          className="w-[300px] h-[400px]"
+          className="w-full max-w-[340px] h-full"
         >
           {images.length > 0 ? (
             images.map((image, index) => (
@@ -39,9 +39,9 @@ export default function ProjectCard({ project }) {
         </Swiper>
       </div>
 
-      <div className="w-full md:w-1/2 p-8">
+      <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col justify-center">
         <h3 className="text-2xl font-semibold text-[#4fd1c5] mb-4">{project.title}</h3>
-        <p className="text-[#e2e2e2] mb-4">{project.description}</p>
+        <p className="text-[#e2e2e2] mb-4">{project.shortDescription}</p>
         <div className="flex flex-wrap gap-2 mb-6">
           {project.technologies?.map((tech, index) => (
             <span
@@ -54,7 +54,7 @@ export default function ProjectCard({ project }) {
         </div>
         <Link
           to={`/project/${project.id}`}
-          className="inline-block bg-[#4fd1c5] text-black font-semibold px-4 py-2 rounded-lg"
+          className="inline-block bg-[#4fd1c5] text-black font-semibold px-4 py-2 md:px-4 md:py-2 md:text-base rounded-lg transition-all duration-200 w-full md:w-auto md:self-start"
         >
           Ver detalles
         </Link>

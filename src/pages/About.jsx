@@ -114,18 +114,21 @@ const About = () => {
                   <li>• JavaScript, PHP</li>
                   <li>• HTML5, CSS3</li>
                   <li>• React, Vue.js, Node.js</li>
-                  <li>• Express, Tailwind CSS</li>
+                  <li>• Express, Tailwind CSS, Bootstrap</li>
                   <li>• MongoDB, Firebase</li>
+                  <li>• API REST, Vite</li>
+                  <li>• WordPress, WooCommerce</li>
                 </ul>
               </div>
               <div className="bg-[#2a2a2a] p-4 rounded-lg">
                 <h3 className="font-semibold text-xl text-teal-400 mb-2">Herramientas</h3>
                 <ul className="space-y-2">
-                  <li>• WordPress, WooCommerce</li>
-                  <li>• Git, GitHub</li>
                   <li>• Figma, Photoshop, Illustrator</li>
-                  <li>• CapCut</li>
-                  <li>• Netlify, Vercel</li>
+                  <li>• CapCut, After Effects</li>
+                  <li>• Git, GitHub</li>
+                  <li>• Visual Studio Code</li>
+                  <li>• Postman</li>
+                  <li>• Render, Vercel, Netlify</li>
                 </ul>
               </div>
             </div>

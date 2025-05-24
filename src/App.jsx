@@ -6,7 +6,7 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
-import Projecdesc from "./pages/Projectdesc";
+import ProjectDesc from "./pages/ProjectDesc";
 
 
 
@@ -26,7 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/project/:id" element={<Projecdesc />} />
+        <Route path="/project/:id" element={<ProjectDesc />} />
         
         {/* Puedes agregar más rutas luego */}
       </Routes>

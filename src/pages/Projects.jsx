@@ -6,37 +6,40 @@ const projectsData = [
   {
     id: 1,
     title: "Sur Marchands",
-    shortDescription: "Tienda online de vinos franceses con pasarela de pagos integrada.",
-    longDescription: "Sur Marchands es una elegante tienda online especializada en vinos franceses. El proyecto incluye un sistema de gestión de inventario, pasarela de pagos segura, y un diseño responsivo que destaca la calidad de los productos. Implementé un carrito de compras intuitivo y un sistema de filtros avanzado para facilitar la búsqueda de vinos por región, tipo y precio.",
-    technologies: ["WordPress","WooCommerce", "HTML + CSS", "PHP"],
+    shortDescription: "Catálogo digital de vinos franceses con información detallada de bodegas y puntos de venta en Argentina.",
+    longDescription: "Sur Marchands es un catálogo digital elegante especializado en vinos franceses. El proyecto incluye información detallada sobre las bodegas, la historia de cada vino, y los puntos de venta en Argentina donde se pueden encontrar. Implementé un sistema de búsqueda avanzado para facilitar la exploración de vinos por región, tipo y características.",
+    technologies: ["WordPress", "HTML + CSS", "PHP"],
     images: [
       "/images/surmarchands.png",
       "/images/surmarchands-dos.png",
       "/images/surmarchands-tres.png",
+      "/images/surmarchands-cuatro.png",
     ],
     gallery: [
-      "/images/lpgp-galeria-sur.jpg",
-      "/images/imagen-galeria.jpg",
+     "/images/lpgp-galeria-sur.jpg",
       "/images/imagen-galeria-dos.jpg",
       "/images/imagen-galeria-tres.jpg",
+      "/images/imagen-galeria.jpg"
     ],
     link: "https://surmarchands.com/",
   },
   {
     id: 2,
     title: "Claudia Cestau",
-    shortDescription: "Portfolio personal de una artista visual con galería de obras y blog integrado.",
-    longDescription: "Portfolio personal para la artista visual Claudia Cestau. El sitio incluye una galería dinámica de sus obras, un blog para compartir su proceso creativo, y una sección de contacto para comisiones. El diseño minimalista y elegante pone el foco en su obra, con una navegación intuitiva y una experiencia de usuario optimizada para dispositivos móviles.",
+    shortDescription: "E-commerce de lentes de diseño con carcazas originales y sistema de personalización.",
+    longDescription: "E-commerce especializado en la venta de lentes de diseño con carcazas originales de la marca. El sitio incluye un sistema de personalización que permite a los compradores ajustar sus lentes según sus necesidades específicas. Implementé un catálogo interactivo que destaca los diseños únicos y las opciones de personalización disponibles, junto con un sistema de pedidos personalizados para garantizar la satisfacción del cliente.",
     technologies: ["WordPress","WooCommerce", "HTML + CSS","JavaScript", "PHP"],
     images: [
+      
       "/images/mariu-cestau.png",
       "/images/mariu-cestau-dos.png",
       "/images/mariu-cestau-tres.png",
     ],
     gallery: [
-      "/images/mariu-cestau.png",
-      "/images/mariu-cestau-dos.png",
-      "/images/mariu-cestau-tres.png",
+      "/images/logo-galeria-claudie.jpg",
+      "/images/imagen-galeria-lentes.jpg",
+      "/images/imagen-galeria-lentes-dos.jpg",
+      "/images/imagen-galeria-lentes-tres.jpg"
     ],
     link: "#",
   },
@@ -53,18 +56,18 @@ const projectsData = [
       "/images/haras-abril-cuatro.png",
     ],
     gallery: [
-      "/images/haras-abril.png",
-      "/images/haras-abril-dos.png",
-      "/images/haras-abril-tres.png",
-      "/images/haras-abril-cuatro.png",
+      "/images/logo-galeria-haras.jpg",
+      "/images/imagen-galeria-haras.jpg",
+      "/images/imagen-galeria-haras-dos.jpg",
+      "/images/imagen-galeria-haras-tres.jpg"
     ],
-    link: "#",
+    link: "https://harasabril.com.ar/",
   },
   {
     id: 4,
     title: "EscoPlay",
-    shortDescription: "Plataforma educativa interactiva para niños con juegos y actividades.",
-    longDescription: "EscoPlay es una plataforma educativa innovadora diseñada para hacer el aprendizaje divertido para los niños. Incluye juegos interactivos, actividades educativas, y un sistema de seguimiento del progreso. La plataforma está optimizada para diferentes dispositivos y edades, con contenido personalizable y un diseño amigable para niños. Implementé un sistema de gamificación para mantener el interés y la motivación de los usuarios.",
+    shortDescription: "E-commerce de librería, juguetería y regalería con pasarela de pagos integrada.",
+    longDescription: "EscoPlay es un e-commerce completo especializado en la venta de productos de librería, juguetería y regalería. El sitio incluye una pasarela de pagos segura y un diseño responsivo que facilita la navegación y compra de productos. Implementé un carrito de compras intuitivo y un sistema de filtros avanzado para facilitar la búsqueda de productos por categoría, precio y disponibilidad.",
     technologies: ["WordPress","WooCommerce", "HTML + CSS", "PHP"],
     images: [
       "/images/escoplay.png",
@@ -72,10 +75,56 @@ const projectsData = [
       "/images/escoplay-tres.png",
     ],
     gallery: [
-      "/images/escoplay.png",
-      "/images/escoplay-dos.png",
-      "/images/escoplay-tres.png",
+      "/images/imagen-galeria-esco-uno.jpg",
+      "/images/imagen-galeria-esco-dos.jpg",
+      "/images/imagen-galeria-esco-tres.jpg",
+      "/images/logo-galeria-escoplay.jpg"
     ],
+    link: "https://escoplay.com/",
+  },
+  {
+    id: 6,
+    title: "PokeDex API",
+    shortDescription: "Pokedex 100% funcional con todas las generaciones de pokemons",
+    longDescription: "Pokedex completa y funcional que integra datos detallados de todos los Pokémon a través de las generaciones. Incluye información exhaustiva sobre estadísticas base, habilidades, evoluciones, tipos y datos de los juegos. La aplicación permite buscar y filtrar Pokémon por múltiples criterios, mostrar sus evoluciones y pre-evoluciones, y acceder a información detallada de cada uno. Implementé una interfaz intuitiva y responsiva que facilita la navegación y consulta de datos.",
+    technologies: ["React", "Vite", "Tailwind", "HTML + CSS", "JavaScript" , "API REST" , "Vercel" , "GitHub"],
+    images: [
+      "/images/logo-pokedex-tarjeta.jpg",
+      "/images/poke-card-uno.png",
+      "/images/poke-card-dos.jpg",    
+    ],
+    gallery: [
+      "/images/logo-pokedex.jpg",
+      "/images/imagen-galeria-poke-tres.jpg",
+      "/images/imagen-galeria-poke.jpg",
+      "/images/imagen-galeria-poke-dos.jpg",
+    ],
+    link: "https://pokedex-fan.vercel.app/",
+    github: "https://github.com/tomasaverbuj/pokedex-fan",
+  },
+  {
+    id: 5,
+    title: "LeveleAR",
+    shortDescription: "Steam argentino en desarrollo para visibilizar videojuegos nacionales con precios regionales.",
+    longDescription: "LeveleAR es un proyecto personal en proceso que busca convertirse en el 'Steam argentino', una plataforma dedicada a dar visibilidad y espacio al desarrollo de videojuegos en Argentina. El objetivo es ofrecer un catálogo de juegos nacionales con precios adaptados a la región, impulsando la industria local y facilitando el acceso a producciones independientes y de estudios argentinos.",
+    technologies: ["React", "Vite", "MongoDB", "HTML + CSS", "JavaScript" , "Vercel" , "GitHub" , "Node.js" , "Express" , "Tailwind"],
+    images: [
+      "/images/icono-levelear-portfolio.jpg"
+    ],
+    gallery: [
+      "/images/logo-galeria-levelear.jpg"
+    ],
+    link: "#",
+    github: "https://github.com/TomasAverbuj/LeveleAr",
+  },
+  {
+    id: 7,
+    title: "AdmiLink",
+    shortDescription: "App para gestión y seguimiento de obras de consorcio para administradores y usuarios.",
+    longDescription: "AdmiLink es una aplicación diseñada para la gestión integral de obras en consorcios. Permite tanto a administradores como a usuarios llevar un registro detallado del progreso de las obras, consultar el historial y la documentación, y mantener una comunicación eficiente sobre el estado de cada proyecto y la administración correspondiente. Facilita la transparencia y el control en la administración de consorcios.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "HTML + CSS", "JavaScript"],
+    images: [],
+    gallery: [],
     link: "#",
   },
 ];
@@ -124,7 +173,7 @@ export default function Projects() {
         <h2 className="text-4xl font-bold text-center text-[#4fd1c5] mb-16">
           Proyectos
         </h2>
-        <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-48 md:gap-32">
           {projectsData.map((project, index) => (
             <div
               key={project.id}
@@ -134,7 +183,7 @@ export default function Projects() {
                 visibleCards.includes(index) ? "visible" : ""
               }`}
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} shortDescription={project.shortDescription} />
             </div>
           ))}
         </div>
