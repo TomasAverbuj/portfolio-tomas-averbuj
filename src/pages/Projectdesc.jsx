@@ -54,6 +54,15 @@ export default function ProjectDesc() {
           {/* Descripción */}
           <p className="text-[#e2e2e2] text-lg">{project.longDescription}</p>
 
+          {/* Credenciales de prueba */}
+          {project.testCredentials && (
+            <div className="bg-[#23272f] p-4 rounded-xl mt-2">
+              <p className="font-bold text-[#4fd1c5] mb-1">{project.testCredentials.title}</p>
+              <p className="text-[#e2e2e2] text-sm">Usuario: <span className="font-mono">{project.testCredentials.user}</span></p>
+              <p className="text-[#e2e2e2] text-sm">Contraseña: <span className="font-mono">{project.testCredentials.password}</span></p>
+            </div>
+          )}
+
           {/* Tecnologías */}
           <div className="flex flex-wrap gap-3 items-center">
             {project.technologies.map((tech, index) => (

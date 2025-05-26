@@ -16,7 +16,7 @@ const projectsData = [
       "/images/surmarchands-cuatro.png",
     ],
     gallery: [
-     "/images/lpgp-galeria-sur.jpg",
+      "/images/lpgp-galeria-sur.jpg",
       "/images/imagen-galeria-dos.jpg",
       "/images/imagen-galeria-tres.jpg",
       "/images/imagen-galeria.jpg"
@@ -28,9 +28,9 @@ const projectsData = [
     title: "Claudia Cestau",
     shortDescription: "E-commerce de lentes de diseño con carcazas originales y sistema de personalización.",
     longDescription: "E-commerce especializado en la venta de lentes de diseño con carcazas originales de la marca. El sitio incluye un sistema de personalización que permite a los compradores ajustar sus lentes según sus necesidades específicas. Implementé un catálogo interactivo que destaca los diseños únicos y las opciones de personalización disponibles, junto con un sistema de pedidos personalizados para garantizar la satisfacción del cliente.",
-    technologies: ["WordPress","WooCommerce", "HTML + CSS","JavaScript", "PHP"],
+    technologies: ["WordPress", "WooCommerce", "HTML + CSS", "JavaScript", "PHP"],
     images: [
-      
+
       "/images/mariu-cestau.png",
       "/images/mariu-cestau-dos.png",
       "/images/mariu-cestau-tres.png",
@@ -68,7 +68,7 @@ const projectsData = [
     title: "EscoPlay",
     shortDescription: "E-commerce de librería, juguetería y regalería con pasarela de pagos integrada.",
     longDescription: "EscoPlay es un e-commerce completo especializado en la venta de productos de librería, juguetería y regalería. El sitio incluye una pasarela de pagos segura y un diseño responsivo que facilita la navegación y compra de productos. Implementé un carrito de compras intuitivo y un sistema de filtros avanzado para facilitar la búsqueda de productos por categoría, precio y disponibilidad.",
-    technologies: ["WordPress","WooCommerce", "HTML + CSS", "PHP"],
+    technologies: ["WordPress", "WooCommerce", "HTML + CSS", "PHP"],
     images: [
       "/images/escoplay.png",
       "/images/escoplay-dos.png",
@@ -87,11 +87,11 @@ const projectsData = [
     title: "PokeDex API",
     shortDescription: "Pokedex 100% funcional con todas las generaciones de pokemons",
     longDescription: "Pokedex completa y funcional que integra datos detallados de todos los Pokémon a través de las generaciones. Incluye información exhaustiva sobre estadísticas base, habilidades, evoluciones, tipos y datos de los juegos. La aplicación permite buscar y filtrar Pokémon por múltiples criterios, mostrar sus evoluciones y pre-evoluciones, y acceder a información detallada de cada uno. Implementé una interfaz intuitiva y responsiva que facilita la navegación y consulta de datos.",
-    technologies: ["React", "Vite", "Tailwind", "HTML + CSS", "JavaScript" , "API REST" , "Vercel" , "GitHub"],
+    technologies: ["React", "Vite", "Tailwind", "HTML + CSS", "JavaScript", "API REST", "Vercel", "GitHub"],
     images: [
       "/images/logo-pokedex-tarjeta.jpg",
-      "/images/poke-card-uno.png",
-      "/images/poke-card-dos.jpg",    
+      "/images/poke-card-uno.jpg",
+      "/images/poke-card-dos.jpg",
     ],
     gallery: [
       "/images/logo-pokedex.jpg",
@@ -100,32 +100,32 @@ const projectsData = [
       "/images/imagen-galeria-poke-dos.jpg",
     ],
     link: "https://pokedex-fan.vercel.app/",
-    github: "https://github.com/tomasaverbuj/pokedex-fan",
-  },
-  {
-    id: 5,
-    title: "LeveleAR",
-    shortDescription: "Steam argentino en desarrollo para visibilizar videojuegos nacionales con precios regionales.",
-    longDescription: "LeveleAR es un proyecto personal en proceso que busca convertirse en el 'Steam argentino', una plataforma dedicada a dar visibilidad y espacio al desarrollo de videojuegos en Argentina. El objetivo es ofrecer un catálogo de juegos nacionales con precios adaptados a la región, impulsando la industria local y facilitando el acceso a producciones independientes y de estudios argentinos.",
-    technologies: ["React", "Vite", "MongoDB", "HTML + CSS", "JavaScript" , "Vercel" , "GitHub" , "Node.js" , "Express" , "Tailwind"],
-    images: [
-      "/images/icono-levelear-portfolio.jpg"
-    ],
-    gallery: [
-      "/images/logo-galeria-levelear.jpg"
-    ],
-    link: "#",
-    github: "https://github.com/TomasAverbuj/LeveleAr",
+    github: "https://github.com/TomasAverbuj/PokleDex-Fan",
   },
   {
     id: 7,
     title: "AdmiLink",
     shortDescription: "App para gestión y seguimiento de obras de consorcio para administradores y usuarios.",
     longDescription: "AdmiLink es una aplicación diseñada para la gestión integral de obras en consorcios. Permite tanto a administradores como a usuarios llevar un registro detallado del progreso de las obras, consultar el historial y la documentación, y mantener una comunicación eficiente sobre el estado de cada proyecto y la administración correspondiente. Facilita la transparencia y el control en la administración de consorcios.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "HTML + CSS", "JavaScript"],
-    images: [],
-    gallery: [],
-    link: "#",
+    testCredentials: {
+      title: "Credenciales de prueba:",
+      user: "admin@admin.com",
+      password: "hola123"
+    },
+    technologies: ["React", "Vite", "Firebase", "Vercel", "HTML + CSS", "JavaScript" , "Tailwind"],
+    images: [
+      "/images/logo-galeria-admilink.jpg",
+      "/images/admilink-uno.jpg",
+      "/images/admilink-dos.jpg",
+      "/images/admilink-tres.jpg"
+    ],
+    gallery: [
+      "/images/logo-galeria-admilink.jpg",
+      "/images/imagen-galeria-admi.jpg",
+      "/images/imagen-galeria-admi-dos.jpg",
+      "/images/imagen-galeria-admi-tres.jpg",],
+    link: "https://admilink.vercel.app/",
+    github: "https://github.com/TomasAverbuj/Aprop-Seguimiento",
   },
 ];
 
@@ -179,9 +179,8 @@ export default function Projects() {
               key={project.id}
               ref={(el) => (cardRefs.current[index] = el)}
               data-index={index}
-              className={`fade-in-card ${
-                visibleCards.includes(index) ? "visible" : ""
-              }`}
+              className={`fade-in-card ${visibleCards.includes(index) ? "visible" : ""
+                }`}
             >
               <ProjectCard project={project} shortDescription={project.shortDescription} />
             </div>

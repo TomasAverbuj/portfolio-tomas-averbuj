@@ -13,8 +13,8 @@ const images = [
   "/images/escoplay.png",
   "/images/surmarchands.png",
   "/images/logo-pokedex-tarjeta.jpg",
-  "/images/icono-levelear-portfolio.jpg",
-  
+  // "/images/icono-levelear-portfolio.jpg", // Comentado temporalmente
+  "/images/logo-galeria-admilink.jpg",
 ];
 
 const ImageSliderSwiper = () => {
