@@ -41,7 +41,7 @@ const projectsData = [
       "/images/imagen-galeria-lentes-dos.jpg",
       "/images/imagen-galeria-lentes-tres.jpg"
     ],
-    link: "#",
+    link: "https://claudiacestau.doblenuez.com/",
   },
   {
     id: 3,
