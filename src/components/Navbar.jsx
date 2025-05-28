@@ -82,7 +82,8 @@ function Navbar() {
 
                       <div className="py-8 px-6 md:px-12 md:py-16 lg:py-0 lg:pr-0 lg:pl-6">
                         <a
-                          href="Curriculum Tomas Averbuj.pdf"
+                          href="curriculum-tomas-averbuj.pdf"
+                          download
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-6 py-3 rounded-full bg-[#4fd1c5] text-black text-center font-semibold hover:bg-[#38b2ac] transition-colors"

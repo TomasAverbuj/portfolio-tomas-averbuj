@@ -87,7 +87,7 @@ const Home = () => {
 
         {/* Proyectos */}
         <section className="w-full py-20 bg-[#121212]">
-          <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-8xl mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-bold text-[#4fd1c5] mb-4 text-center">
               Proyectos
             </h2>
@@ -96,22 +96,8 @@ const Home = () => {
             </p>
             <div className="relative">
               <ImageSliderSwiper />
-              <div className="flex justify-center mt-12">
-                <Link
-                  to="/projects"
-                  className="group inline-flex items-center px-8 py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition-all duration-300"
-                >
-                  Ver todos los proyectos
-                  <svg 
-                    className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
+             
+              
             </div>
           </div>
         </section>
