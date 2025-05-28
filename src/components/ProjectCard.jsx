@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <div className="flex flex-col md:flex-row items-center w-full bg-[#2a2a2a] rounded-2xl shadow-xl min-h-[520px] p-4 md:p-8">
-      <div className="w-full md:w-1/2 h-[480px] md:h-[500px] flex items-center justify-center overflow-hidden">
+      <div className="w-full md:w-1/2 h-[384px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <Swiper
           effect={"cards"}
           grabCursor={true}
@@ -25,7 +25,11 @@ export default function ProjectCard({ project }) {
                 <img
                   src={image}
                   alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover object-top rounded-2xl"
+                  className={
+                    project.id === 6 && index === 1
+                      ? "w-full h-full object-contain p-4 rounded-2xl bg-white"
+                      : "w-full h-full object-cover object-top rounded-2xl"
+                  }
                 />
               </SwiperSlide>
             ))

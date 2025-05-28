@@ -57,7 +57,7 @@ const Home = () => {
           </div>
 
           {/* Botones de icono para LinkedIn y GitHub */}
-          <div className="flex justify-center gap-6 mt-4 sm:mt-8 w-full z-20 relative">
+          <div className="flex justify-center gap-6 mt-4 sm:mt-8 w-full z-10 relative">
             <a
               href="https://www.linkedin.com/in/tomas-averbuj-62b47222b/"
               target="_blank"

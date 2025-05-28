@@ -59,16 +59,16 @@ const ImageSliderSwiper = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="flex flex-row gap-4 w-full justify-center mt-8 overflow-x-hidden">
+        <div className="flex flex-col md:flex-row gap-4 w-full justify-center items-center mt-8 overflow-x-hidden z-0">
           <Link
             to={`/project/${sliderProjects[activeIndex]?.id}`}
-            className="px-5 py-2 sm:px-8 sm:py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition text-sm sm:text-base"
+            className="w-full md:w-auto text-center px-5 py-2 sm:px-8 sm:py-4 bg-[#4fd1c5] text-black font-semibold rounded-full hover:bg-[#38b2ac] transition text-sm sm:text-base"
           >
             Ver proyecto
           </Link>
           <Link
             to="/projects"
-            className="px-5 py-2 sm:px-8 sm:py-4 border-2 border-[#4fd1c5] text-[#4fd1c5] font-semibold rounded-full hover:bg-[#4fd1c5] hover:text-black transition text-sm sm:text-base"
+            className="w-full md:w-auto text-center px-5 py-2 sm:px-8 sm:py-4 border-2 border-[#4fd1c5] text-[#4fd1c5] font-semibold rounded-full hover:bg-[#4fd1c5] hover:text-black transition text-sm sm:text-base"
           >
             Ver todos los proyectos
           </Link>
