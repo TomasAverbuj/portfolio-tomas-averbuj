@@ -47,7 +47,7 @@ const Contact = () => {
               type="text"
               name="user_name"
               required
-              className="w-full p-4 rounded-lg bg-[#3a3a3a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4fd1c5] transition-all duration-300"
+              className="w-full bg-transparent border-0 border-b-2 border-gray-300 focus:border-[#4fd1c5] text-white placeholder-gray-400 py-3 px-0 focus:outline-none transition-all duration-300"
               placeholder="Tu nombre"
             />
           </div>
@@ -60,7 +60,7 @@ const Contact = () => {
               type="email"
               name="user_email"
               required
-              className="w-full p-4 rounded-lg bg-[#3a3a3a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4fd1c5] transition-all duration-300"
+              className="w-full bg-transparent border-0 border-b-2 border-gray-300 focus:border-[#4fd1c5] text-white placeholder-gray-400 py-3 px-0 focus:outline-none transition-all duration-300"
               placeholder="tuemail@ejemplo.com"
             />
           </div>
@@ -73,7 +73,7 @@ const Contact = () => {
               name="message"
               rows="5"
               required
-              className="w-full p-4 rounded-lg bg-[#3a3a3a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4fd1c5] transition-all duration-300"
+              className="w-full bg-transparent border-0 border-b-2 border-gray-300 focus:border-[#4fd1c5] text-white placeholder-gray-400 py-3 px-0 focus:outline-none transition-all duration-300 resize-none"
               placeholder="Escribe tu mensaje aquí..."
             ></textarea>
           </div>
