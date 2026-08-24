@@ -1,14 +1,18 @@
 const items = [
+  "Full stack",
   "WordPress",
   "WooCommerce",
+  "React",
+  "Next.js",
+  "Vue.js",
+  "JavaScript",
+  "PHP",
+  "MongoDB",
+  "MySQL",
   "Google Ads",
   "Brevo",
-  "React",
-  "UI/UX",
-  "Figma",
-  "JavaScript",
   "Node.js",
-  "PHP",
+  "UI/UX",
 ];
 
 export default function Marquee() {

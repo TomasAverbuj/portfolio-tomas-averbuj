@@ -71,7 +71,10 @@ export default function ProjectDesc() {
       </div>
 
       <div className="mt-14 md:mt-20">
-        <Gallery images={project.gallery?.length ? project.gallery : project.images} />
+        <Gallery
+          images={project.gallery?.length ? project.gallery : project.images}
+          url={project.link}
+        />
       </div>
 
       <div className="site-pad mt-16 md:mt-24 grid lg:grid-cols-12 gap-12">

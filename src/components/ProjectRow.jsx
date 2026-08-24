@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ImageReveal } from "./Reveal";
+import BrowserMockup from "./BrowserMockup";
+import { useLang } from "../i18n/LanguageContext";
 
 export default function ProjectRow({ project, index }) {
   const n = String(index + 1).padStart(2, "0");
+  const { m } = useLang();
 
   return (
     <Link to={`/project/${project.id}`} className="group block border-t border-line last:border-b">
@@ -34,21 +37,27 @@ export default function ProjectRow({ project, index }) {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="relative overflow-hidden aspect-[16/10]">
-            <ImageReveal
-              src={project.images[0]}
-              alt={project.title}
-              className="absolute inset-0"
-              imgClass="transition-transform duration-700 group-hover:scale-105"
-            />
-            <motion.div
-              className="absolute inset-0 bg-paper/0 group-hover:bg-paper/10 transition-colors duration-500"
-              aria-hidden
-            />
-            <span className="absolute bottom-4 right-4 font-syne text-[10px] tracking-[0.2em] uppercase bg-ink/80 text-paper px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity">
-              Ver caso →
-            </span>
-          </div>
+          <BrowserMockup
+            url={project.link}
+            className="transition-transform duration-700 group-hover:-translate-y-1"
+            reveal={
+              <>
+                <ImageReveal
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="absolute inset-0"
+                  imgClass="transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+                <motion.div
+                  className="absolute inset-0 bg-paper/0 group-hover:bg-paper/8 transition-colors duration-500 pointer-events-none"
+                  aria-hidden
+                />
+                <span className="absolute bottom-3 right-3 z-10 font-syne text-[10px] tracking-[0.2em] uppercase bg-ink/85 text-paper px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {m.projects.viewCase}
+                </span>
+              </>
+            }
+          />
         </div>
       </article>
     </Link>

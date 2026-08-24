@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import BrowserMockup from "./BrowserMockup";
 
-export default function Gallery({ images = [] }) {
+export default function Gallery({ images = [], url }) {
   const [selected, setSelected] = useState(0);
   const [lightbox, setLightbox] = useState(false);
 
@@ -23,17 +24,23 @@ export default function Gallery({ images = [] }) {
     <section className="site-pad">
       <button
         type="button"
-        className="block w-full overflow-hidden aspect-[16/9] bg-raised"
+        className="block w-full text-left"
         onClick={() => setLightbox(true)}
       >
-        <motion.img
-          key={images[selected]}
-          src={images[selected]}
-          alt=""
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full h-full object-cover object-top"
+        <BrowserMockup
+          url={url}
+          aspect="aspect-[16/9]"
+          reveal={
+            <motion.img
+              key={images[selected]}
+              src={images[selected]}
+              alt=""
+              initial={{ opacity: 0, scale: 1.03 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-0 h-full w-full object-cover object-top"
+            />
+          }
         />
       </button>
       <div className="mt-3 grid grid-cols-4 md:grid-cols-6 gap-2">
@@ -42,7 +49,7 @@ export default function Gallery({ images = [] }) {
             key={src + i}
             type="button"
             onClick={() => setSelected(i)}
-            className={`aspect-[16/10] overflow-hidden border ${
+            className={`aspect-[16/10] overflow-hidden rounded-md border bg-raised ${
               selected === i ? "border-paper" : "border-transparent opacity-60 hover:opacity-100"
             }`}
           >
@@ -63,7 +70,14 @@ export default function Gallery({ images = [] }) {
             <button className="absolute top-6 right-8 text-3xl text-paper/70 hover:text-paper" type="button">
               ×
             </button>
-            <img src={images[selected]} alt="" className="max-h-[88vh] max-w-full object-contain" />
+            <div className="w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+              <BrowserMockup
+                src={images[selected]}
+                url={url}
+                aspect="aspect-[16/9]"
+                imgClass="object-contain bg-ink"
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

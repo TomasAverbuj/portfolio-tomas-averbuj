@@ -1,20 +1,22 @@
 import ContactForm from "../components/ContactForm";
 import Reveal, { ScrollSplit } from "../components/Reveal";
+import { useLang } from "../i18n/LanguageContext";
 
 export default function Contact() {
+  const { m } = useLang();
+  const c = m.contact;
+
   return (
     <main className="bg-ink text-paper min-h-screen pt-32 pb-28">
       <div className="site-pad grid lg:grid-cols-12 gap-12 lg:gap-20">
         <div className="lg:col-span-5">
-          <p className="eyebrow mb-4">Contacto</p>
+          <p className="eyebrow mb-4">{c.eyebrow}</p>
           <ScrollSplit
             className="font-display text-5xl md:text-7xl leading-[0.92]"
-            lines={["Empecemos", "por un mail."]}
+            lines={[c.title1, c.title2]}
           />
           <Reveal>
-            <p className="mt-6 text-paper/60 max-w-sm">
-              Contame qué hay que lanzar, en qué punto está y para cuándo. Respondo con alcance y siguiente paso.
-            </p>
+            <p className="mt-6 text-paper/60 max-w-sm">{c.lead}</p>
           </Reveal>
           <div className="mt-12 space-y-4">
             <a href="mailto:averbujtomas@gmail.com" className="block text-xl hover:text-white transition-colors">

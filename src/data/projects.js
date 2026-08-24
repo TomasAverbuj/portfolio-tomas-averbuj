@@ -8,10 +8,10 @@ export const projects = [
     location: "Buenos Aires",
     featured: true,
     shortDescription:
-      "El estudio que fundamos con Luna Bianchi: diseño web, desarrollo y branding para marcas de Argentina y el resto del mundo.",
+      "Estudio de diseño y desarrollo a medida en React. Co-fundado con Luna Bianchi para marcas de Argentina y el resto del mundo.",
     longDescription:
-      "NekoDev es el estudio creativo que armamos con Luna Bianchi. Ella desde el diseño gráfico; yo desde el desarrollo full stack. Ofrecemos sitios institucionales, e-commerce y aplicaciones a medida, además de branding, UX y dirección de proyecto. En el sitio viven piezas como Iocus Juguetes, LeveleAr y Nai Nai. Es el espacio desde el que tomamos clientes propios, con WordPress y desarrollo a medida según el caso.",
-    technologies: ["WordPress", "WooCommerce", "React", "UX/UI", "Branding"],
+      "NekoDev es el estudio creativo que armamos con Luna Bianchi. Ella desde el diseño gráfico; yo desde el desarrollo full stack. El sitio del estudio es React a medida — interfaz propia, motion y un recorte de piezas (Iocus Juguetes, LeveleAr, Nai Nai). Desde ahí tomamos clientes: institucionales, e-commerce y productos a medida, en React, Next.js o WordPress según lo que el proyecto pida.",
+    technologies: ["React", "JavaScript", "Next.js", "Diseño a medida", "UX/UI", "Branding"],
     images: [
       "/images/work/nekodev.jpg",
       "/images/work/nekodev-dos.jpg",

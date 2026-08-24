@@ -80,3 +80,34 @@ body {
     animation: none !important;
   }
 }
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #0a0a0a !important;
+    overflow: visible !important;
+  }
+
+  .grain,
+  .has-custom-cursor {
+    display: none !important;
+  }
+
+  .cv-page {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: #fff !important;
+  }
+
+  .cv-sheet {
+    box-shadow: none !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
