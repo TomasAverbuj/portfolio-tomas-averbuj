@@ -198,7 +198,7 @@ export const messages = {
       lead: "Sitios, tiendas y productos digitales. Cada pieza con el mismo criterio: claridad, oficio y un launch que se sienta premium.",
       count: "proyectos",
       cta: "¿El siguiente es el tuyo?",
-      viewCase: "Ver caso →",
+      viewCase: "Ver proyecto →",
     },
     contact: {
       eyebrow: "Contacto",
@@ -432,7 +432,7 @@ export const messages = {
       lead: "Sites, stores and digital products. Same bar every time: clarity, craft and a launch that feels premium.",
       count: "projects",
       cta: "Is the next one yours?",
-      viewCase: "View case →",
+      viewCase: "View project →",
     },
     contact: {
       eyebrow: "Contact",

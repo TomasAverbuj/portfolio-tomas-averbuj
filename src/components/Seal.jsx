@@ -1,7 +1,7 @@
 import { useId } from "react";
 
 const PHRASE =
-  "FULL STACK  ·  WORDPRESS  ·  WOOCOMMERCE  ·  REACT  ·  NEXT.JS  ·  VUE  ·  PHP  ·  GOOGLE ADS  ·  NEKODEV  ·  JRA  ·  ";
+  "FULL STACK  ·  WORDPRESS  ·  WOOCOMMERCE  ·  REACT  ·  NEXT.JS  ·  VUE  ·  PHP  ·  GOOGLE ADS  ·  NEKODEV  ·  ";
 
 export default function Seal({ className = "" }) {
   const uid = useId().replace(/:/g, "");
