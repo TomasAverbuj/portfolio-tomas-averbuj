@@ -3,21 +3,88 @@ import Reveal, { ScrollSplit } from "../components/Reveal";
 import Portrait from "../components/Portrait";
 import { useLang } from "../i18n/LanguageContext";
 
+/**
+ * ═══════════════════════════════════════════════════════════
+ *  POSICIÓN DEL NOMBRE (TOMAS / AVERBUJ) — ajustá acá
+ *
+ *  Solo desktop / notebook (lg+). En mobile y tablet no se muestra.
+ *
+ *  lineGap / linePull → separación vertical TOMAS ↔ AVERBUJ
+ *  showMark → puntito rojo en el ancla
+ * ═══════════════════════════════════════════════════════════
+ */
+const NAME_POS = {
+  desktop: {
+    top: "100px",
+    bottom: "auto",
+    left: "100%",
+    right: "auto",
+  },
+  /** Hueco visual entre nombre y apellido */
+  lineGap: "48px",
+  /** Compensa el padding de la fuente display italic */
+  linePull: "-0.28em",
+  showMark: false,
+};
+
+const nameLineStyle = {
+  marginTop: "calc(var(--name-line-pull) + var(--name-line-gap))",
+};
+
+const nameVars = {
+  "--name-line-gap": NAME_POS.lineGap,
+  "--name-line-pull": NAME_POS.linePull,
+};
+
 export default function About() {
   const { m } = useLang();
   const a = m.about;
 
   return (
-    <main className="bg-ink text-paper min-h-screen pt-32 pb-0">
-      <section className="site-pad pb-20 md:pb-28">
-        <p className="eyebrow mb-4">{a.eyebrow}</p>
-        <ScrollSplit
-          className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] max-w-5xl"
-          lines={[a.title1, a.title2]}
-        />
-        <Reveal>
-          <p className="mt-8 max-w-2xl text-lg md:text-xl text-paper/60 leading-relaxed">{a.lead}</p>
-        </Reveal>
+    <main className="bg-ink text-paper min-h-screen pt-28 md:pt-32 pb-0">
+      <section className="relative site-pad pb-20 md:pb-28 min-h-[70vh] md:min-h-[78vh] flex flex-col justify-end overflow-x-clip">
+        <div className="relative w-full max-w-xl">
+          {/* Solo desktop / notebook (lg+) — absolute, detrás del copy */}
+          <div
+            className="name-hero-pos hidden lg:block pointer-events-none select-none leading-none z-0"
+            style={{
+              "--name-top": NAME_POS.desktop.top,
+              "--name-bottom": NAME_POS.desktop.bottom,
+              "--name-left": NAME_POS.desktop.left,
+              "--name-right": NAME_POS.desktop.right,
+              ...nameVars,
+            }}
+            aria-hidden
+          >
+            {NAME_POS.showMark && (
+              <span
+                className="absolute -top-1 -left-1 z-20 h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-red-500/40"
+                title="Ancla NAME_POS (top/left)"
+              />
+            )}
+            <p className="name-outline font-display italic text-[12vw] tracking-tight whitespace-nowrap leading-[0.75] -translate-x-[48%]">
+              TOMAS
+            </p>
+            <p
+              className="name-outline font-display italic text-[12vw] tracking-tight whitespace-nowrap leading-[0.75]"
+              style={nameLineStyle}
+            >
+              AVERBUJ
+            </p>
+          </div>
+
+          {/* Copy del hero: flujo normal abajo (no se ancla al nombre) */}
+          <div className="relative z-10">
+            <p className="eyebrow mb-4">{a.eyebrow}</p>
+            <ScrollSplit
+              className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9]"
+              lines={[a.title1, a.title2]}
+            />
+            <Reveal>
+              <p className="mt-8 text-lg md:text-xl text-paper/60 leading-relaxed">{a.lead}</p>
+            </Reveal>
+          </div>
+        </div>
       </section>
 
       <section className="site-pad pb-24 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">

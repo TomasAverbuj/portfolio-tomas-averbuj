@@ -7,11 +7,8 @@ function hostLabel(url) {
   }
 }
 
-/**
- * Marco tipo navegador para que las capturas se lean como mockups de producto,
- * no como JPG sueltos. Sin perspectiva 3D agresiva: encaja con el look studio.
- */
-export default function BrowserMockup({
+/** Marco navegador desktop */
+export function BrowserMockup({
   src,
   alt = "",
   url,
@@ -62,3 +59,45 @@ export default function BrowserMockup({
     </div>
   );
 }
+
+/** Marco teléfono */
+export function PhoneMockup({ src, alt = "", className = "", imgClass = "" }) {
+  return (
+    <div className={`relative mx-auto w-full max-w-[220px] md:max-w-[260px] ${className}`}>
+      <div className="rounded-[2rem] border border-line bg-raised p-2 md:p-2.5 shadow-[0_0_0_1px_rgba(243,238,230,0.04)]">
+        <div className="relative overflow-hidden rounded-[1.45rem] bg-ink aspect-[9/19.5]">
+          <div
+            className="pointer-events-none absolute left-1/2 top-2 z-10 h-1.5 w-16 -translate-x-1/2 rounded-full bg-paper/20"
+            aria-hidden
+          />
+          <img
+            src={src}
+            alt={alt}
+            className={`h-full w-full object-cover object-top ${imgClass}`}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** Marco tablet */
+export function TabletMockup({ src, alt = "", className = "", imgClass = "" }) {
+  return (
+    <div className={`relative mx-auto w-full max-w-[340px] md:max-w-[400px] ${className}`}>
+      <div className="rounded-2xl border border-line bg-raised p-2.5 md:p-3">
+        <div className="relative overflow-hidden rounded-xl bg-ink aspect-[3/4]">
+          <img
+            src={src}
+            alt={alt}
+            className={`h-full w-full object-cover object-top ${imgClass}`}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default BrowserMockup;

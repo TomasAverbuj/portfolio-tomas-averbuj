@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLang } from "../i18n/LanguageContext";
+import { EMAIL_PUBLIC } from "../config/email";
 
 export default function Footer() {
   const { m } = useLang();
@@ -17,10 +18,10 @@ export default function Footer() {
               {m.footer.talk}
             </Link>
             <a
-              href="mailto:averbujtomas@gmail.com"
+              href={`mailto:${EMAIL_PUBLIC}`}
               className="block mt-6 text-lg md:text-2xl text-paper/70 hover:text-paper transition-colors"
             >
-              averbujtomas@gmail.com
+              {EMAIL_PUBLIC}
             </a>
           </div>
           <div className="flex flex-wrap gap-8 text-sm text-paper/60">

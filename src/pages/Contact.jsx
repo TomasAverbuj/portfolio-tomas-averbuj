@@ -1,6 +1,7 @@
 import ContactForm from "../components/ContactForm";
 import Reveal, { ScrollSplit } from "../components/Reveal";
 import { useLang } from "../i18n/LanguageContext";
+import { EMAIL_PUBLIC } from "../config/email";
 
 export default function Contact() {
   const { m } = useLang();
@@ -19,8 +20,8 @@ export default function Contact() {
             <p className="mt-6 text-paper/60 max-w-sm">{c.lead}</p>
           </Reveal>
           <div className="mt-12 space-y-4">
-            <a href="mailto:averbujtomas@gmail.com" className="block text-xl hover:text-white transition-colors">
-              averbujtomas@gmail.com
+            <a href={`mailto:${EMAIL_PUBLIC}`} className="block text-xl hover:text-white transition-colors">
+              {EMAIL_PUBLIC}
             </a>
             <a href="tel:+541169729914" className="block text-paper/60 hover:text-paper">
               +54 11 6972-9914

@@ -75,26 +75,35 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-5">
-            <div className="flex items-center gap-1 font-syne text-[11px] tracking-[0.18em] uppercase">
+          <div className="hidden lg:flex items-center gap-6">
+            <div
+              className="flex items-center border border-line px-1 py-1"
+              role="group"
+              aria-label="Idioma"
+            >
               <button
                 type="button"
                 onClick={() => setLang("es")}
-                className={`px-1.5 transition-colors ${lang === "es" ? "text-paper" : "text-paper/40 hover:text-paper/70"}`}
+                className={`font-syne text-[10px] tracking-[0.18em] uppercase px-2.5 py-1.5 transition-colors ${
+                  lang === "es" ? "bg-mist text-ink" : "text-paper/45 hover:text-paper"
+                }`}
                 aria-pressed={lang === "es"}
               >
                 ES
               </button>
-              <span className="text-paper/25">/</span>
               <button
                 type="button"
                 onClick={() => setLang("en")}
-                className={`px-1.5 transition-colors ${lang === "en" ? "text-paper" : "text-paper/40 hover:text-paper/70"}`}
+                className={`font-syne text-[10px] tracking-[0.18em] uppercase px-2.5 py-1.5 transition-colors ${
+                  lang === "en" ? "bg-mist text-ink" : "text-paper/45 hover:text-paper"
+                }`}
                 aria-pressed={lang === "en"}
               >
                 EN
               </button>
             </div>
+
+            <span className="h-4 w-px bg-line" aria-hidden />
 
             <div className="relative" ref={cvRef}>
               <button
@@ -142,19 +151,26 @@ export default function Navbar() {
           </div>
 
           <div className="lg:hidden flex items-center gap-3 relative z-50">
-            <div className="flex items-center gap-1 font-syne text-[11px] tracking-[0.18em] uppercase">
+            <div
+              className="flex items-center border border-line"
+              role="group"
+              aria-label="Idioma"
+            >
               <button
                 type="button"
                 onClick={() => setLang("es")}
-                className={lang === "es" ? "text-paper" : "text-paper/40"}
+                className={`font-syne text-[10px] tracking-[0.16em] uppercase px-2 py-1.5 transition-colors ${
+                  lang === "es" ? "bg-mist text-ink" : "text-paper/45"
+                }`}
               >
                 ES
               </button>
-              <span className="text-paper/25">/</span>
               <button
                 type="button"
                 onClick={() => setLang("en")}
-                className={lang === "en" ? "text-paper" : "text-paper/40"}
+                className={`font-syne text-[10px] tracking-[0.16em] uppercase px-2 py-1.5 transition-colors ${
+                  lang === "en" ? "bg-mist text-ink" : "text-paper/45"
+                }`}
               >
                 EN
               </button>

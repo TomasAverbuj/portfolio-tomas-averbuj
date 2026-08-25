@@ -1,6 +1,11 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useLang } from "../i18n/LanguageContext";
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+} from "../config/email";
 
 export default function ContactForm({ dark = true }) {
   const form = useRef(null);
@@ -10,9 +15,10 @@ export default function ContactForm({ dark = true }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!form.current) return;
     setStatus("sending");
     emailjs
-      .sendForm("service_w6gn4sg", "template_98fap2n", form.current, "QZF9PN3HZEGWIIr6S")
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, EMAILJS_PUBLIC_KEY)
       .then(() => {
         setStatus("ok");
         e.target.reset();

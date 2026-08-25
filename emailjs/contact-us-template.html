@@ -1,0 +1,80 @@
+<!--
+  EmailJS — template "Contact Us" (template_98fap2n)
+  Dashboard → Email Templates → Contact Us → Edit
+
+  Settings:
+  - To email: (vacío — usa Gmail conectado: averbujtomas@gmail.com)
+  - From name: {{user_name}}
+  - Reply-To: {{user_email}}
+  - Subject: Portfolio — contacto de {{user_name}}
+
+  Variables del formulario (ContactForm.jsx):
+  - user_name
+  - user_email
+  - message
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="margin:0;padding:0;background:#f3eee6;font-family:Arial,Helvetica,sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f3eee6;padding:32px 16px;">
+      <tr>
+        <td align="center">
+          <table width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e4ddd0;">
+            <tr>
+              <td style="padding:28px 32px;border-bottom:1px solid #e4ddd0;">
+                <p style="margin:0 0 6px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#8c867b;">
+                  Portfolio · Tomás Averbuj
+                </p>
+                <h1 style="margin:0;font-size:22px;font-weight:600;color:#0a0a0a;">
+                  Nuevo mensaje de contacto
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:28px 32px;">
+                <p style="margin:0 0 20px;font-size:15px;line-height:1.6;color:#0a0a0a;">
+                  Alguien completó el formulario en tu portfolio.
+                </p>
+                <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;line-height:1.6;color:#0a0a0a;">
+                  <tr>
+                    <td style="padding:10px 0;border-bottom:1px solid #eae6de;width:120px;color:#8c867b;vertical-align:top;">
+                      Nombre
+                    </td>
+                    <td style="padding:10px 0;border-bottom:1px solid #eae6de;">
+                      {{user_name}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;border-bottom:1px solid #eae6de;color:#8c867b;vertical-align:top;">
+                      Email
+                    </td>
+                    <td style="padding:10px 0;border-bottom:1px solid #eae6de;">
+                      <a href="mailto:{{user_email}}" style="color:#0a0a0a;">{{user_email}}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#8c867b;vertical-align:top;">
+                      Mensaje
+                    </td>
+                    <td style="padding:10px 0;white-space:pre-wrap;">{{message}}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px 32px;background:#0a0a0a;">
+                <p style="margin:0;font-size:11px;letter-spacing:0.12em;color:#8c867b;">
+                  Respondé directo a {{user_email}} · Enviado desde portfolio-tomas-averbuj
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

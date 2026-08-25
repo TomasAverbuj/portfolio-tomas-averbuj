@@ -1,0 +1,14 @@
+Subject: Portfolio — contacto de {{user_name}}
+
+---
+
+Nuevo mensaje desde el portfolio de Tomás Averbuj.
+
+Nombre: {{user_name}}
+Email: {{user_email}}
+
+Mensaje:
+{{message}}
+
+---
+Respondé a: {{user_email}}

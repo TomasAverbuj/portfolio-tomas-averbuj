@@ -73,11 +73,31 @@ body {
   @apply font-syne text-[11px] md:text-xs tracking-[0.22em] uppercase text-muted;
 }
 
+.name-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(243, 238, 230, 0.28);
+  text-stroke: 1.5px rgba(243, 238, 230, 0.28);
+  paint-order: stroke fill;
+}
+
+/* About hero name — solo desktop / notebook (lg+) */
+.name-hero-pos {
+  position: absolute;
+  top: var(--name-top, 140px);
+  bottom: var(--name-bottom, auto);
+  left: var(--name-left, 100%);
+  right: var(--name-right, auto);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-spin-slow,
   .animate-marquee,
   .animate-floaty {
     animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
 
@@ -110,4 +130,139 @@ body {
     text-decoration: none !important;
     color: inherit !important;
   }
+}
+
+/* Host off-screen para el clon del PDF */
+.cv-pdf-host {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 194mm;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/*
+  Layout compacto SOLO para el PDF (el CV en pantalla no cambia).
+  Mismo contenido; tipografía y aire más densos + evitar cortes mid-bloque.
+*/
+.cv-pdf-export {
+  width: 194mm !important;
+  max-width: 194mm !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #f3eee6 !important;
+  color: #0a0a0a !important;
+  font-size: 11.5px !important;
+  line-height: 1.35 !important;
+}
+
+.cv-pdf-export .cv-keep {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-pdf-export header {
+  padding-bottom: 10px !important;
+  margin-bottom: 0 !important;
+}
+
+.cv-pdf-export header p:first-child {
+  margin-bottom: 4px !important;
+  font-size: 9px !important;
+}
+
+.cv-pdf-export h1 {
+  font-size: 28px !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+.cv-pdf-export header .cv-role,
+.cv-pdf-export header p.cv-role {
+  margin-top: 4px !important;
+  font-size: 10px !important;
+}
+
+.cv-pdf-export .cv-meta {
+  margin-top: 8px !important;
+  gap: 6px 14px !important;
+  font-size: 10.5px !important;
+}
+
+.cv-pdf-export section {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.cv-pdf-export section:last-child {
+  padding-bottom: 0 !important;
+}
+
+.cv-pdf-export h2 {
+  font-size: 16px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.15 !important;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.cv-pdf-export h3 {
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+}
+
+.cv-pdf-export .cv-summary {
+  font-size: 11.5px !important;
+  line-height: 1.4 !important;
+  max-width: none !important;
+}
+
+.cv-pdf-export .cv-jobs {
+  gap: 10px !important;
+}
+
+.cv-pdf-export .cv-job {
+  display: grid !important;
+  grid-template-columns: 28mm 1fr !important;
+  gap: 8px 12px !important;
+}
+
+.cv-pdf-export .cv-job-year {
+  font-size: 9px !important;
+  padding-top: 2px !important;
+}
+
+.cv-pdf-export .cv-job-body p {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  margin-top: 4px !important;
+}
+
+.cv-pdf-export .cv-stack {
+  gap: 4px !important;
+}
+
+.cv-pdf-export .cv-stack li {
+  font-size: 8.5px !important;
+  padding: 3px 7px !important;
+}
+
+.cv-pdf-export .cv-edu {
+  gap: 10px !important;
+}
+
+.cv-pdf-export .cv-projects {
+  gap: 6px !important;
+}
+
+.cv-pdf-export .cv-projects li {
+  padding-bottom: 6px !important;
+}
+
+.cv-pdf-export .cv-footer-link {
+  margin-top: 10px !important;
+  font-size: 9px !important;
 }

@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import ProjectDesc from "./pages/Projectdesc";
 import Cv from "./pages/Cv";
+import ScrollTopButton from "./components/ScrollTopButton";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ function Shell() {
       <CustomCursor />
       <div className="grain print:hidden" aria-hidden />
       <Navbar />
+      <ScrollTopButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
