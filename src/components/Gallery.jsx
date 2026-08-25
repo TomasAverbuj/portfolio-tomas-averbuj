@@ -18,12 +18,15 @@ export default function Gallery({ images = [], url }) {
     <section className="site-pad">
       <button
         type="button"
-        className="block w-full text-left"
+        className="block w-full max-w-4xl mx-auto text-left"
         onClick={() => setLightbox("desktop")}
       >
+        <p className="mb-3 text-center font-syne text-[10px] tracking-[0.2em] uppercase text-muted">
+          Desktop
+        </p>
         <BrowserMockup
           url={url}
-          aspect="aspect-[16/9]"
+          aspect="aspect-[16/10]"
           reveal={
             <motion.img
               src={desktop}
