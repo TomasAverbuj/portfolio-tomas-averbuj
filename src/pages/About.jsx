@@ -15,13 +15,13 @@ import { useLang } from "../i18n/LanguageContext";
  */
 const NAME_POS = {
   desktop: {
-    top: "100px",
+    top: "90px",
     bottom: "auto",
     left: "100%",
     right: "auto",
   },
   /** Hueco visual entre nombre y apellido */
-  lineGap: "48px",
+  lineGap: "55px",
   /** Compensa el padding de la fuente display italic */
   linePull: "-0.28em",
   showMark: false,
@@ -87,20 +87,20 @@ export default function About() {
         </div>
       </section>
 
-      <section className="site-pad pb-24 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <Reveal className="lg:col-span-5 flex justify-center lg:justify-start">
-          <Portrait className="w-[220px] sm:w-[280px] md:w-[320px]" />
+      <section className="site-pad pb-24 grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+        <Reveal className="lg:col-span-4 flex justify-center lg:justify-start">
+          <Portrait className="w-[220px] sm:w-[280px] md:w-[300px]" />
         </Reveal>
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-8 min-w-0">
           <p className="eyebrow mb-4">{a.who}</p>
-          <p className="text-paper/70 leading-relaxed text-lg max-w-xl">
+          <p className="text-paper/70 leading-relaxed text-lg max-w-3xl">
             {a.p1a}{" "}
             <a href="https://www.nekodev.com.ar/" target="_blank" rel="noreferrer" className="text-paper hover:text-white">
               NekoDev
             </a>{" "}
             {a.p1b}
           </p>
-          <p className="mt-6 text-paper/70 leading-relaxed max-w-xl">
+          <p className="mt-6 text-paper/70 leading-relaxed max-w-3xl">
             {a.p2a}{" "}
             <a href="https://jrawebdesignllc.com/" target="_blank" rel="noreferrer" className="text-paper hover:text-white">
               JRA Web Design LLC

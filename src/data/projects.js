@@ -13,6 +13,24 @@ function deviceSet(slug) {
   };
 }
 
+/** Campos de texto que se pueden sobreescribir por idioma (URLs / ids / images no). */
+export function localizeProject(project, lang = "es") {
+  if (!project) return null;
+  const { en, ...base } = project;
+  if (lang !== "en" || !en) return base;
+  return {
+    ...base,
+    ...en,
+    testCredentials: en.testCredentials
+      ? { ...(base.testCredentials || {}), ...en.testCredentials }
+      : base.testCredentials,
+  };
+}
+
+export function localizeProjects(list, lang = "es") {
+  return list.map((p) => localizeProject(p, lang));
+}
+
 export const projects = [
   {
     id: 11,
@@ -29,6 +47,15 @@ export const projects = [
     technologies: ["React", "JavaScript", "Next.js", "Diseño a medida", "UX/UI", "Branding"],
     ...deviceSet("nekodev"),
     link: "https://www.nekodev.com.ar/",
+    en: {
+      category: "Studio — design & development",
+      role: "Co-founder & development",
+      shortDescription:
+        "Custom React design-and-dev studio. Co-founded with Luna Bianchi for brands in Argentina and beyond.",
+      longDescription:
+        "NekoDev is the creative studio we built with Luna Bianchi — she on graphic design, me on full-stack development. The studio site is custom React: own UI, motion, and a selection of work (Iocus Juguetes, LeveleAr, Nai Nai). From there we take clients: institutional, e-commerce and custom products — React, Next.js or WordPress depending on the brief.",
+      technologies: ["React", "JavaScript", "Next.js", "Custom design", "UX/UI", "Branding"],
+    },
   },
   {
     id: 12,
@@ -45,6 +72,14 @@ export const projects = [
     technologies: ["WordPress", "WooCommerce", "HTML + CSS", "JavaScript", "UX/UI"],
     ...deviceSet("iocus"),
     link: "https://www.iocusarteenjuguetes.com.ar/",
+    en: {
+      category: "E-commerce",
+      role: "Design & development",
+      shortDescription:
+        "Online store for Montessori Pikler soft play, toys, and kids’ event rentals.",
+      longDescription:
+        "Iocus brings soft play and Montessori toys to events and homes. The e-commerce organizes collections, highlights bestsellers and makes custom orders easy. Built recently with NekoDev: catalog, brand story and a mobile-first checkout.",
+    },
   },
   {
     id: 8,
@@ -61,6 +96,14 @@ export const projects = [
     technologies: ["WordPress", "WooCommerce", "JavaScript", "HTML + CSS", "UX/UI"],
     ...deviceSet("armeria-williams"),
     link: "https://armeriawilliams.com/",
+    en: {
+      category: "Platform + e-commerce",
+      role: "Design & development",
+      shortDescription:
+        "One experience for shop, shooting club, licenses, courses and raffles — built for mobile first.",
+      longDescription:
+        "Armería Williams unifies the shop, Williams Shooting Club memberships, license workflows, courses, events and raffles in one product. Scope covered IA, UI and a clear flow: browse, buy, join the club or start a license process without getting lost. Includes catalog, accounts, day-pass/annual memberships and raffle entry from checkout.",
+    },
   },
   {
     id: 9,
@@ -77,6 +120,14 @@ export const projects = [
     technologies: ["WordPress", "HTML + CSS", "JavaScript", "UX/UI"],
     ...deviceSet("abrazo-maternal"),
     link: "https://abrazomaternal.com/",
+    en: {
+      category: "Institutional site",
+      role: "Design & development",
+      shortDescription:
+        "Warm digital identity for a childcare and early-education center (18 months to 5 years).",
+      longDescription:
+        "Abrazo Maternal needed a site that felt caring, professional and close. I designed and built an institutional site with a clear hero, services, gallery and contact — soft palette, friendly type. Goal: families understand the offer, location and next step in seconds, without visual noise or mobile friction.",
+    },
   },
   {
     id: 10,
@@ -93,6 +144,14 @@ export const projects = [
     technologies: ["WordPress", "WooCommerce", "HTML + CSS", "JavaScript", "UX/UI"],
     ...deviceSet("epumps"),
     link: "https://epumpspr.com/",
+    en: {
+      category: "Corporate + catalog",
+      role: "Design & development",
+      shortDescription:
+        "B2B site for a leader in pumps and water treatment — services, catalog and multi-country contact.",
+      longDescription:
+        "ePUMPS Solutions sells, repairs and maintains pumps and fluid systems across Puerto Rico, Dominican Republic and Colombia. The site turns a dense technical offer — install, filtration, skids, maintenance — into a clear story: leadership, services, brands represented and 24/7 contact. Contemporary corporate design, strong type hierarchy and direct quote CTAs.",
+    },
   },
   {
     id: 1,
@@ -109,6 +168,14 @@ export const projects = [
     technologies: ["WordPress", "HTML + CSS", "PHP"],
     ...deviceSet("sur-marchands"),
     link: "https://surmarchands.com/",
+    en: {
+      category: "Digital catalog",
+      role: "Design & development",
+      shortDescription:
+        "Digital catalog of French wines with wineries, history and retail points in Argentina.",
+      longDescription:
+        "Sur Marchands is an elegant digital catalog focused on French wines. It covers wineries, each wine’s story and where to buy in Argentina. I built advanced search so visitors can explore by region, type and traits.",
+    },
   },
   {
     id: 6,
@@ -126,6 +193,15 @@ export const projects = [
     ...deviceSet("pokedex"),
     link: "https://pokedex-fan.vercel.app/",
     github: "https://github.com/TomasAverbuj/PokleDex-Fan",
+    en: {
+      category: "Personal product",
+      role: "Design & development",
+      location: "Personal",
+      shortDescription:
+        "Pokédex with 1,025 Pokémon, silhouette quiz, team builder, comparer and type chart.",
+      longDescription:
+        "Full fan app on PokéAPI: 1,025 Pokémon (gens I–IX) with search, filters by generation, type, legendary/mythical/baby, favorites and sort by number, name or stats. Plus play/analysis tools: “Who’s that Pokémon?” quiz, 6-slot team builder with offensive coverage and defensive gaps, side-by-side comparer (stats, types, weaknesses, shareable link) and an interactive type chart. Frontend only — favorites and team live in the browser.",
+    },
   },
   {
     id: 3,
@@ -142,6 +218,14 @@ export const projects = [
     technologies: ["WordPress", "HTML + CSS", "PHP"],
     ...deviceSet("haras-abril"),
     link: "https://harasabril.com.ar/",
+    en: {
+      category: "Institutional site",
+      role: "Design & development",
+      shortDescription:
+        "Site for a horse farm with class bookings and horse information management.",
+      longDescription:
+        "Full web platform for Haras Abril: riding-class bookings, horse info and news. Includes an admin panel for bookings, horse updates and publishing. Design mirrors the farm’s elegance and professionalism.",
+    },
   },
   {
     id: 2,
@@ -158,6 +242,14 @@ export const projects = [
     technologies: ["WordPress", "WooCommerce", "HTML + CSS", "JavaScript", "PHP"],
     ...deviceSet("claudia-cestau"),
     link: "https://claudiacestau.com/",
+    en: {
+      category: "E-commerce",
+      role: "Design & development",
+      shortDescription:
+        "Design eyewear e-commerce with original frames and customization.",
+      longDescription:
+        "E-commerce for design eyewear with the brand’s original frames. Includes customization so buyers can adapt lenses to their needs, an interactive catalog of unique designs, and a custom-order flow.",
+    },
   },
   {
     id: 7,
@@ -180,6 +272,17 @@ export const projects = [
     ...deviceSet("admilink"),
     link: "https://admi-link.vercel.app/login",
     github: "https://github.com/TomasAverbuj/Aprop-Seguimiento",
+    en: {
+      category: "Web application",
+      role: "Design & development",
+      shortDescription:
+        "App for condo building-works tracking — for admins and residents.",
+      longDescription:
+        "AdmiLink manages building works in condo associations. Admins and users track progress, history and docs, and stay aligned on each project’s status. Built for transparency and control in property administration.",
+      testCredentials: {
+        title: "Test credentials:",
+      },
+    },
   },
 ];
 

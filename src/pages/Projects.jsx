@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Reveal, { ScrollSplit } from "../components/Reveal";
 import ProjectRow from "../components/ProjectRow";
-import { projects } from "../data/projects";
+import { localizeProjects, projects } from "../data/projects";
 import { useLang } from "../i18n/LanguageContext";
 
 export default function Projects() {
-  const { m } = useLang();
+  const { lang, m } = useLang();
   const p = m.projects;
+  const list = localizeProjects(projects, lang);
 
   return (
     <main className="bg-ink text-paper min-h-screen pt-32 pb-24">
@@ -17,12 +18,12 @@ export default function Projects() {
           <p className="mt-6 text-paper/55 max-w-xl text-lg">{p.lead}</p>
         </Reveal>
         <p className="mt-8 font-syne text-xs tracking-[0.2em] uppercase text-muted">
-          {String(projects.length).padStart(2, "0")} {p.count}
+          {String(list.length).padStart(2, "0")} {p.count}
         </p>
       </div>
 
       <div>
-        {projects.map((project, i) => (
+        {list.map((project, i) => (
           <ProjectRow key={project.id} project={project} index={i} />
         ))}
       </div>

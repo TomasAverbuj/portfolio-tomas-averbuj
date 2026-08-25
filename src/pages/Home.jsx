@@ -8,7 +8,7 @@ import ContactForm from "../components/ContactForm";
 import Seal from "../components/Seal";
 import Portrait from "../components/Portrait";
 import BrowserMockup from "../components/BrowserMockup";
-import { featuredProjects, projects } from "../data/projects";
+import { featuredProjects, localizeProjects, projects } from "../data/projects";
 import { useLang } from "../i18n/LanguageContext";
 
 function LocalTime({ locale }) {
@@ -32,7 +32,9 @@ function LocalTime({ locale }) {
 export default function Home() {
   const { lang, m } = useLang();
   const h = m.home;
-  const more = projects.filter((p) => !p.featured).slice(0, 3);
+  const allProjects = localizeProjects(projects, lang);
+  const featured = localizeProjects(featuredProjects, lang);
+  const more = allProjects.filter((p) => !p.featured).slice(0, 3);
   const stats = [
     { value: "03+", label: h.stats.years },
     { value: "10+", label: h.stats.projects },
@@ -152,7 +154,7 @@ export default function Home() {
         </div>
 
         <div>
-          {featuredProjects.map((project, i) => (
+          {featured.map((project, i) => (
             <ProjectRow key={project.id} project={project} index={i} />
           ))}
         </div>
@@ -164,7 +166,7 @@ export default function Home() {
               to="/projects"
               className="font-syne text-[11px] tracking-[0.2em] uppercase text-paper/70 hover:text-paper"
             >
-              {h.archive} ({projects.length})
+              {h.archive} ({allProjects.length})
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-4 md:gap-6">
@@ -192,18 +194,18 @@ export default function Home() {
       </section>
 
       <section className="py-24 md:py-32">
-        <div className="site-pad grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <Reveal className="lg:col-span-5 flex justify-center lg:justify-start">
-            <Portrait className="w-[240px] sm:w-[300px] md:w-[360px]" />
+        <div className="site-pad grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+          <Reveal className="lg:col-span-4 flex justify-center lg:justify-start">
+            <Portrait className="w-[240px] sm:w-[280px] md:w-[320px]" />
           </Reveal>
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-8 min-w-0">
             <p className="eyebrow mb-5">{h.who}</p>
             <ScrollSplit
               className="font-display text-4xl md:text-6xl leading-[0.95]"
               lines={[h.whoTitle1, h.whoTitle2]}
             />
             <Reveal delay={0.1}>
-              <p className="mt-8 text-lg text-paper/65 max-w-xl leading-relaxed">
+              <p className="mt-8 text-lg text-paper/65 max-w-3xl leading-relaxed">
                 {h.whoP1a}{" "}
                 <a
                   href="https://www.nekodev.com.ar/"
@@ -217,7 +219,7 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.16}>
-              <p className="mt-4 text-lg text-paper/65 max-w-xl leading-relaxed">
+              <p className="mt-4 text-lg text-paper/65 max-w-3xl leading-relaxed">
                 {h.whoP2a}{" "}
                 <a
                   href="https://jrawebdesignllc.com/"
@@ -231,7 +233,7 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.18}>
-              <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
                 {stats.map((s) => (
                   <div key={s.label}>
                     <p className="font-display text-3xl md:text-4xl text-paper">{s.value}</p>

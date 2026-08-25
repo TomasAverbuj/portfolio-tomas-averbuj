@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useLang } from "../i18n/LanguageContext";
-import { featuredProjects } from "../data/projects";
+import { featuredProjects, localizeProjects } from "../data/projects";
 import { EMAIL_PUBLIC, SITE_URL } from "../config/email";
 import { downloadCvPdf } from "../utils/downloadCvPdf";
 
@@ -26,6 +26,7 @@ export default function Cv() {
   const { m, lang } = useLang();
   const cv = m.cv;
   const timeline = m.about.timeline;
+  const featured = localizeProjects(featuredProjects, lang);
   const [params] = useSearchParams();
   const autoDownload = params.get("download") === "1";
   const sheetRef = useRef(null);
@@ -206,7 +207,7 @@ export default function Cv() {
         <section className="pt-8">
           <h2 className="font-display text-2xl md:text-3xl mb-5">{cv.selected}</h2>
           <ul className="cv-projects space-y-3">
-            {featuredProjects.slice(0, 5).map((p) => (
+            {featured.slice(0, 5).map((p) => (
               <li key={p.id} className="cv-keep flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 border-b border-ink/10 pb-3">
                 <div>
                   <span className="font-display text-lg">{p.title}</span>
