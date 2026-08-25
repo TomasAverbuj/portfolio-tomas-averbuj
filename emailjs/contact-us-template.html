@@ -1,17 +1,21 @@
 <!--
   EmailJS — template "Contact Us" (template_98fap2n)
   Dashboard → Email Templates → Contact Us → Edit
+  Service: service_wocathy (Gmail · averbujtomas@gmail.com)
 
-  Settings:
-  - To email: (vacío — usa Gmail conectado: averbujtomas@gmail.com)
+  Settings IMPORTANTES:
+  - To email: averbujtomas@gmail.com
+      (o {{to_email}} — el form envía to_email = averbujtomas@gmail.com)
+      NO uses {{user_email}} acá: eso manda el mail al visitante.
   - From name: {{user_name}}
   - Reply-To: {{user_email}}
   - Subject: Portfolio — contacto de {{user_name}}
 
-  Variables del formulario (ContactForm.jsx):
-  - user_name
-  - user_email
-  - message
+  Account → Security:
+  - Allowed origins: http://localhost:5173 y https://portfolio-tomas-averbuj.vercel.app
+
+  Variables del formulario:
+  - user_name, user_email, message, to_email
 -->
 
 <!DOCTYPE html>

@@ -132,25 +132,28 @@ body {
   }
 }
 
-/* Host off-screen para el clon del PDF */
+/* Host off-screen para el clon del PDF — ancho A4 exacto */
 .cv-pdf-host {
   position: fixed;
   left: -10000px;
   top: 0;
-  width: 194mm;
+  width: 210mm;
+  background: #f3eee6;
   pointer-events: none;
   z-index: -1;
 }
 
 /*
   Layout compacto SOLO para el PDF (el CV en pantalla no cambia).
-  Mismo contenido; tipografía y aire más densos + evitar cortes mid-bloque.
+  Ancho 210mm = hoja A4 completa (márgenes internos vía padding).
 */
 .cv-pdf-export {
-  width: 194mm !important;
-  max-width: 194mm !important;
+  width: 210mm !important;
+  max-width: 210mm !important;
+  min-width: 210mm !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 12mm 14mm !important;
+  box-sizing: border-box !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   background: #f3eee6 !important;
@@ -221,18 +224,25 @@ body {
 }
 
 .cv-pdf-export .cv-jobs {
+  display: flex !important;
+  flex-direction: column !important;
   gap: 10px !important;
 }
 
 .cv-pdf-export .cv-job {
   display: grid !important;
-  grid-template-columns: 28mm 1fr !important;
-  gap: 8px 12px !important;
+  grid-template-columns: 32mm 1fr !important;
+  gap: 8px 14px !important;
+  width: 100% !important;
 }
 
 .cv-pdf-export .cv-job-year {
   font-size: 9px !important;
   padding-top: 2px !important;
+}
+
+.cv-pdf-export .cv-job-body {
+  min-width: 0 !important;
 }
 
 .cv-pdf-export .cv-job-body p {
@@ -251,7 +261,9 @@ body {
 }
 
 .cv-pdf-export .cv-edu {
-  gap: 10px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
 }
 
 .cv-pdf-export .cv-projects {
@@ -259,10 +271,20 @@ body {
 }
 
 .cv-pdf-export .cv-projects li {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
   padding-bottom: 6px !important;
+  width: 100% !important;
 }
 
 .cv-pdf-export .cv-footer-link {
   margin-top: 10px !important;
   font-size: 9px !important;
+}
+
+.cv-pdf-export a {
+  color: inherit !important;
 }

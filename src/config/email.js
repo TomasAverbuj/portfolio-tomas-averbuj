@@ -1,5 +1,5 @@
 /** EmailJS — service conectado a averbujtomas@gmail.com */
-export const EMAILJS_SERVICE_ID = "service_w6gn4sg";
+export const EMAILJS_SERVICE_ID = "service_wocathy";
 export const EMAILJS_TEMPLATE_ID = "template_98fap2n";
 export const EMAILJS_PUBLIC_KEY = "QZF9PN3HZEGWIIr6S";
 
