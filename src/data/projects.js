@@ -13,6 +13,11 @@ function deviceSet(slug) {
   };
 }
 
+const JRA = {
+  href: "https://jrawebdesignllc.com/",
+  label: "JRA Web Design LLC",
+};
+
 /** Campos de texto que se pueden sobreescribir por idioma (URLs / ids / images no). */
 export function localizeProject(project, lang = "es") {
   if (!project) return null;
@@ -91,8 +96,13 @@ export const projects = [
     featured: true,
     shortDescription:
       "Una sola experiencia para tienda, club de tiro, licencias, cursos y sorteos — pensada para usarse desde el celular.",
-    longDescription:
-      "Armería Williams unifica shop, membresías del Williams Shooting Club, trámites de licencia, cursos, eventos y sorteos en un mismo producto digital. El trabajo cubrió arquitectura de información, diseño de interfaz y desarrollo de un flujo claro: buscar, comprar, unirse al club o iniciar un trámite sin perderse. Incluye catálogo, cuentas de usuario, membresías (day pass y anual) y participación en sorteos desde la compra.",
+    longDescription: [
+      "Proyecto desarrollado para ",
+      JRA,
+      ": ",
+      { href: "https://armeriawilliams.com/", label: "Armería Williams" },
+      " unifica shop, membresías del Williams Shooting Club, trámites de licencia, cursos, eventos y sorteos en un mismo producto digital. El trabajo cubrió arquitectura de información, diseño de interfaz y desarrollo de un flujo claro: buscar, comprar, unirse al club o iniciar un trámite sin perderse. Incluye catálogo, cuentas de usuario, membresías (day pass y anual) y participación en sorteos desde la compra.",
+    ],
     technologies: ["WordPress", "WooCommerce", "JavaScript", "HTML + CSS", "UX/UI"],
     ...deviceSet("armeria-williams"),
     link: "https://armeriawilliams.com/",
@@ -101,8 +111,13 @@ export const projects = [
       role: "Design & development",
       shortDescription:
         "One experience for shop, shooting club, licenses, courses and raffles — built for mobile first.",
-      longDescription:
-        "Armería Williams unifies the shop, Williams Shooting Club memberships, license workflows, courses, events and raffles in one product. Scope covered IA, UI and a clear flow: browse, buy, join the club or start a license process without getting lost. Includes catalog, accounts, day-pass/annual memberships and raffle entry from checkout.",
+      longDescription: [
+        "Project built for ",
+        JRA,
+        ": ",
+        { href: "https://armeriawilliams.com/", label: "Armería Williams" },
+        " unifies the shop, Williams Shooting Club memberships, license workflows, courses, events and raffles in one product. Scope covered IA, UI and a clear flow: browse, buy, join the club or start a license process without getting lost. Includes catalog, accounts, day-pass/annual memberships and raffle entry from checkout.",
+      ],
     },
   },
   {
@@ -115,8 +130,13 @@ export const projects = [
     featured: true,
     shortDescription:
       "Identidad digital cálida para un centro de cuido y desarrollo educativo de 18 meses a 5 años.",
-    longDescription:
-      "Abrazo Maternal necesitaba una web que transmitiera cuidado, profesionalismo y cercanía. Diseñé y desarrollé un sitio institucional con hero claro, servicios, galería y contacto, con una paleta suave y tipografía amable. El objetivo: que una familia entienda en segundos qué ofrece el centro, dónde está y cómo dar el siguiente paso — sin ruido visual ni fricción en mobile.",
+    longDescription: [
+      "Proyecto desarrollado para ",
+      JRA,
+      ". ",
+      { href: "https://abrazomaternal.com/", label: "Abrazo Maternal" },
+      " necesitaba una web que transmitiera cuidado, profesionalismo y cercanía. Diseñé y desarrollé un sitio institucional con hero claro, servicios, galería y contacto, con una paleta suave y tipografía amable. El objetivo: que una familia entienda en segundos qué ofrece el centro, dónde está y cómo dar el siguiente paso — sin ruido visual ni fricción en mobile.",
+    ],
     technologies: ["WordPress", "HTML + CSS", "JavaScript", "UX/UI"],
     ...deviceSet("abrazo-maternal"),
     link: "https://abrazomaternal.com/",
@@ -125,8 +145,13 @@ export const projects = [
       role: "Design & development",
       shortDescription:
         "Warm digital identity for a childcare and early-education center (18 months to 5 years).",
-      longDescription:
-        "Abrazo Maternal needed a site that felt caring, professional and close. I designed and built an institutional site with a clear hero, services, gallery and contact — soft palette, friendly type. Goal: families understand the offer, location and next step in seconds, without visual noise or mobile friction.",
+      longDescription: [
+        "Project built for ",
+        JRA,
+        ". ",
+        { href: "https://abrazomaternal.com/", label: "Abrazo Maternal" },
+        " needed a site that felt caring, professional and close. I designed and built an institutional site with a clear hero, services, gallery and contact — soft palette, friendly type. Goal: families understand the offer, location and next step in seconds, without visual noise or mobile friction.",
+      ],
     },
   },
   {
@@ -139,8 +164,13 @@ export const projects = [
     featured: true,
     shortDescription:
       "Sitio B2B para un líder en bombas y tratamiento de agua, con servicios, catálogo y contacto multi-país.",
-    longDescription:
-      "ePUMPS Solutions es una compañía de venta, reparación y mantenimiento de bombas y sistemas de fluidos, con operación en Puerto Rico, República Dominicana y Colombia. El sitio organiza una oferta técnica compleja —instalación, filtración, skids, mantenimiento— en una narrativa clara: líderes, servicios, líneas representadas y contacto 24/7. Diseño corporativo contemporáneo, jerarquía tipográfica fuerte y llamados a cotización inmediata.",
+    longDescription: [
+      "Proyecto desarrollado para ",
+      JRA,
+      ". ",
+      { href: "https://epumpspr.com/", label: "ePUMPS Solutions" },
+      " es una compañía de venta, reparación y mantenimiento de bombas y sistemas de fluidos, con operación en Puerto Rico, República Dominicana y Colombia. El sitio organiza una oferta técnica compleja —instalación, filtración, skids, mantenimiento— en una narrativa clara: líderes, servicios, líneas representadas y contacto 24/7. Diseño corporativo contemporáneo, jerarquía tipográfica fuerte y llamados a cotización inmediata.",
+    ],
     technologies: ["WordPress", "WooCommerce", "HTML + CSS", "JavaScript", "UX/UI"],
     ...deviceSet("epumps"),
     link: "https://epumpspr.com/",
@@ -149,8 +179,13 @@ export const projects = [
       role: "Design & development",
       shortDescription:
         "B2B site for a leader in pumps and water treatment — services, catalog and multi-country contact.",
-      longDescription:
-        "ePUMPS Solutions sells, repairs and maintains pumps and fluid systems across Puerto Rico, Dominican Republic and Colombia. The site turns a dense technical offer — install, filtration, skids, maintenance — into a clear story: leadership, services, brands represented and 24/7 contact. Contemporary corporate design, strong type hierarchy and direct quote CTAs.",
+      longDescription: [
+        "Project built for ",
+        JRA,
+        ". ",
+        { href: "https://epumpspr.com/", label: "ePUMPS Solutions" },
+        " sells, repairs and maintains pumps and fluid systems across Puerto Rico, Dominican Republic and Colombia. The site turns a dense technical offer — install, filtration, skids, maintenance — into a clear story: leadership, services, brands represented and 24/7 contact. Contemporary corporate design, strong type hierarchy and direct quote CTAs.",
+      ],
     },
   },
   {

@@ -87,7 +87,7 @@ export default function ProjectDesc() {
         <div className="lg:col-span-7">
           <p className="eyebrow mb-4">{d.case}</p>
           <Reveal>
-            <p className="text-lg leading-relaxed text-paper/70">{project.longDescription}</p>
+            <CaseCopy content={project.longDescription} />
           </Reveal>
           {project.testCredentials && (
             <div className="mt-8 border border-line p-5">
@@ -140,5 +140,36 @@ function Meta({ label, value }) {
       <span className="eyebrow">{label}</span>
       <span>{value}</span>
     </div>
+  );
+}
+
+/** longDescription: string o array de strings / { href, label } */
+function CaseCopy({ content }) {
+  const className = "text-lg leading-relaxed text-paper/70";
+  if (typeof content === "string") {
+    return <p className={className}>{content}</p>;
+  }
+  if (!Array.isArray(content)) return null;
+
+  return (
+    <p className={className}>
+      {content.map((part, i) => {
+        if (typeof part === "string") return <span key={i}>{part}</span>;
+        if (part?.href && part?.label) {
+          return (
+            <a
+              key={i}
+              href={part.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-paper underline decoration-paper/25 hover:text-white hover:decoration-white/40"
+            >
+              {part.label}
+            </a>
+          );
+        }
+        return null;
+      })}
+    </p>
   );
 }
