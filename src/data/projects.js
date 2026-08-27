@@ -189,6 +189,40 @@ export const projects = [
     },
   },
   {
+    id: 13,
+    title: "YR' Brows & Beauty Studio",
+    category: "Sitio institucional",
+    year: "2026",
+    role: "Diseño y desarrollo",
+    location: "Vega Baja, Puerto Rico",
+    featured: true,
+    shortDescription:
+      "Sitio de belleza y bienestar para facial, corporal, láser, micropigmentación y cabello — con reserva clara.",
+    longDescription: [
+      "Proyecto desarrollado para ",
+      JRA,
+      ". ",
+      { href: "https://yrbrows.jrawebdesignllc.com/", label: "YR' Brows & Beauty Studio" },
+      " es el espacio de Yaileen Ríos en Vega Baja: estética facial y corporal, depilación láser, micropigmentación y servicios de cabello. Diseñé y desarrollé una web cálida y ordenada — hero, propósito, servicios y contacto/WhatsApp — para que una clienta entienda la oferta y reserve sin fricción, con tipografía expresiva y foco en la experiencia mobile.",
+    ],
+    technologies: ["WordPress", "HTML + CSS", "JavaScript", "UX/UI"],
+    ...deviceSet("yr-brows"),
+    link: "https://yrbrows.jrawebdesignllc.com/",
+    en: {
+      category: "Institutional site",
+      role: "Design & development",
+      shortDescription:
+        "Beauty and wellness site for facial, body, laser, micropigmentation and hair — with a clear booking path.",
+      longDescription: [
+        "Project built for ",
+        JRA,
+        ". ",
+        { href: "https://yrbrows.jrawebdesignllc.com/", label: "YR' Brows & Beauty Studio" },
+        " is Yaileen Ríos’s studio in Vega Baja: facial and body aesthetics, laser hair removal, micropigmentation and hair services. I designed and built a warm, ordered site — hero, purpose, services and WhatsApp/contact — so clients grasp the offer and book without friction, with expressive type and a mobile-first experience.",
+      ],
+    },
+  },
+  {
     id: 1,
     title: "Sur Marchands",
     category: "Catálogo digital",

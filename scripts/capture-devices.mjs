@@ -59,6 +59,11 @@ const shots = [
     waitMs: 3500,
   },
   {
+    name: "yr-brows",
+    url: "https://yrbrows.jrawebdesignllc.com/",
+    waitMs: 4500,
+  },
+  {
     name: "admilink",
     url: "https://admi-link.vercel.app/login",
     waitMs: 3500,
