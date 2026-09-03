@@ -60,7 +60,7 @@ const shots = [
   },
   {
     name: "yr-brows",
-    url: "https://yrbrows.jrawebdesignllc.com/",
+    url: "https://yrbrowsbeauty.com/",
     waitMs: 4500,
   },
   {
